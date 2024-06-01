@@ -14,3 +14,53 @@
   </head>
   <body>
     
+  <div id="main-container">
+        
+            <div class="h-padding" id="main-nav">
+                <div id="logo-area">
+                    <div id="logo-img">
+                        <img src="<?php echo get_template_directory_uri().'/images/logo.jpg'?>" alt="">
+                    </div>
+                    <div id="logo-text">
+                        Ceylon
+                        <br/> Multi-Service Agency
+                        <br/> Monza
+                    </div>
+                </div>
+                <div id="nav-menus">
+                    <div id="m-logo-area">
+                        <div id="m-logo-img">
+                            <img src="<?php echo get_template_directory_uri().'/images/logo.jpg'?>" alt="">
+                        </div>
+                        <div id="m-logo-text">
+                            Ceylon
+                            <br/> Multi-Service Agency
+                            <br/> Monza
+                        </div>
+                    </div>
+                    <i class="bi bi-x-square closebutton"></i>
+                    <ul id="nav-ul">
+
+                        <li class="nav-li">
+                            <a href="#" class="nav-a">Home</a>
+                        </li>
+                        <li class="nav-li">
+                            <a href="#our-team" class="nav-a">About</a>
+                        </li>
+                        <li class="nav-li">
+                            <a href="#" class="nav-a">Contact</a>
+                        </li>
+                        <li class="nav-li">
+                            <a href="#" class="nav-a">Blog</a>
+                        </li>
+                        <li class="nav-li">
+                            <a href="#" class="nav-a impressa">Impressa</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="overlay-div"></div>
+                <i class="bi bi-list active"></i>
+
+            </div>

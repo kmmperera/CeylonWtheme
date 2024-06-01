@@ -1,0 +1,614 @@
+:root {
+  --main-body-margin:0px 120px 0px 120px;
+  --sub-div-root-fz:10px;
+  --sections-horizontal-padding:0px 120px;
+  --hero-title-fz:64px;
+  --hero-description-fz:36px;
+  --hero-btn-fz:48px;
+  --offer-head-fz:36px;
+  --offer-price-fz:24px;
+  --offer-description-fz:16px;
+  --services-head-fz:48px;
+  --services-price-fz:36px;
+  --services-description-fz:20px;
+  --services-star-fz:72px;
+  --contact-head-fz:48px;
+  --contact-description-fz:32px;
+  --contact-place-name-fz:48px;
+  --contact-place-description-fz:32px;
+  --reviews-head-fz:64px;
+  --reviews-description-fz:24px;
+  --reviews-star-fz:24px;
+  --reviews-person-name-fz:24px;
+  --review-content-fz:20px;
+}
+
+@media (max-width: 1400px) {
+  :root {
+    --main-body-margin:0px 100px 0px 100px;
+    --sub-div-root-fz:8px;
+  }
+}
+@media (max-width: 1200px) {
+  :root {
+    --main-body-margin:0px 80px 0px 80px;
+    --sub-div-root-fz:7px;
+  }
+}
+@media (max-width: 992px) {
+  :root {
+    --main-body-margin:0px 60px 0px 60px;
+    --sub-div-root-fz:5px;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --main-body-margin:0px 40px 0px 40px;
+    --sub-div-root-fz:4px;
+  }
+}
+@media (max-width: 576px) {
+  :root {
+    --sub-div-root-fz:3px;
+  }
+}
+/* Css reset */
+/* -------------- common  css ------------------     */
+/*  -------------------sass  Css------------------  */
+#impressa-hero-wrapper {
+  position: relative;
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+  #impressa-hero-wrapper {
+    margin-top: 20px;
+  }
+}
+#impressa-hero-wrapper #impressa-hero-area {
+  font-size: var(--sub-div-root-fz);
+  width: 100%;
+  height: 122em;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(45deg, #AFFFCA 0%, #FAFCF6 100%);
+  padding: var(--sections-horizontal-padding);
+}
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-hero-area {
+    flex-direction: column;
+    justify-content: initial;
+    padding: var(--main-body-margin);
+    position: relative;
+  }
+}
+#impressa-hero-wrapper #impressa-hero-area #impress-hero-left {
+  font-size: var(--sub-div-root-fz);
+  padding-top: 20em;
+  width: 86em;
+}
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-hero-area #impress-hero-left {
+    width: 90%;
+    max-width: 400px;
+    padding-top: 10em;
+  }
+}
+#impressa-hero-wrapper #impressa-hero-area #impress-hero-left #impressa-hero-title {
+  font-size: 6.4em;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+}
+#impressa-hero-wrapper #impressa-hero-area #impress-hero-left #impressa-hero-description {
+  font-size: 3.6em;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  margin-top: 1em;
+}
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-hero-area #impress-hero-left #impressa-hero-description {
+    margin-bottom: 12px;
+  }
+}
+#impressa-hero-wrapper #impressa-hero-area #impress-hero-left #impressa-hero-btn {
+  font-size: 4.8em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  margin-top: 0.75em;
+  width: 6em;
+  height: 2.083em;
+  display: inline-block;
+}
+#impressa-hero-wrapper #impressa-hero-area #impress-hero-left #impressa-hero-btn button {
+  color: white;
+  width: 100%;
+  height: 100%;
+  background-color: #2CC232;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 0;
+  font-size: 1em;
+}
+#impressa-hero-wrapper #impressa-hero-area #impress-hero-left #impressa-hero-sec-btn {
+  font-size: 4.8em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  margin-top: 0.75em;
+  display: none;
+  width: 6em;
+  height: 2.083em;
+  margin-left: 24px;
+}
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-hero-area #impress-hero-left #impressa-hero-sec-btn {
+    display: inline-block;
+  }
+}
+#impressa-hero-wrapper #impressa-hero-area #impress-hero-left #impressa-hero-sec-btn button {
+  color: #129346;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #075E2A;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+}
+#impressa-hero-wrapper #impressa-hero-area #impress-hero-left #or-line {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-top: 12px;
+  width: 90px;
+  text-align: center;
+}
+#impressa-hero-wrapper #impressa-hero-area #impressa-hero-right {
+  font-size: var(--sub-div-root-fz);
+  margin-top: 10.4em;
+  width: 44.3em;
+  height: 4.1em;
+}
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-hero-area #impressa-hero-right img {
+    position: absolute;
+    bottom: 5em;
+    right: 3em;
+    width: 60em;
+    opacity: 0.6;
+  }
+}
+#impressa-hero-wrapper #impressa-offer-area {
+  font-size: var(--sub-div-root-fz);
+  position: absolute;
+  width: 150em;
+  max-width: 98%;
+  height: 31em;
+  bottom: -15.5em;
+  left: 0;
+}
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-offer-area {
+    position: relative;
+    height: initial;
+    padding: var(--main-body-margin);
+  }
+}
+#impressa-hero-wrapper #impressa-offer-area #offer-list {
+  display: flex;
+  gap: 17.2em;
+  margin-left: 11.2em;
+  position: absolute;
+  left: 0;
+  bottom: 6.8em;
+}
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-offer-area #offer-list {
+    position: relative;
+    flex-direction: column;
+    margin: 0;
+  }
+}
+#impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer {
+  font-size: var(--sub-div-root-fz);
+  position: relative;
+}
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer {
+    display: flex;
+    gap: 6em;
+  }
+}
+#impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-pic {
+  width: 22.7em;
+  height: 29.2em;
+  aspect-ratio: 227/292;
+}
+#impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2.4em;
+}
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-details-wrapper {
+    flex-grow: 1;
+    background-color: #062A55;
+    height: 29.2em;
+    padding: 2.4em;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+  }
+}
+#impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-details-wrapper .offer-title {
+  font-size: 3.6em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  margin-top: 0.5em;
+  color: white;
+}
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-details-wrapper .offer-title {
+    font-size: 5em;
+  }
+}
+#impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-details-wrapper .offer-price {
+  font-size: 2.4em;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin-top: 0.66em;
+  color: #F6D10D;
+}
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-details-wrapper .offer-price {
+    font-size: 3.5em;
+  }
+}
+#impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-details-wrapper .offer-description {
+  font-size: 1.6em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+  color: white;
+  margin-top: 0.5em;
+  max-width: 90%;
+}
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-details-wrapper .offer-description {
+    font-size: 3em;
+  }
+}
+#impressa-hero-wrapper #impressa-offer-area::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+  background-color: #062A55;
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-offer-area::before {
+    display: none;
+    position: relative;
+  }
+}
+
+#impressa-services-area {
+  font-size: var(--sub-div-root-fz);
+  margin-top: 28.2em;
+  padding: var(--main-body-margin);
+}
+#impressa-services-area .impressa-service {
+  font-size: var(--sub-div-root-fz);
+  margin-top: 16em;
+  display: flex;
+  gap: 6.4em;
+}
+#impressa-services-area .impressa-service .impressa-service-left {
+  width: 48.6em;
+  aspect-ratio: 48.6/47;
+}
+#impressa-services-area .impressa-service .impressa-service-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.2em;
+}
+#impressa-services-area .impressa-service .impressa-service-right {
+  max-width: 70em;
+  position: relative;
+}
+@media (max-width: 768px) {
+  #impressa-services-area .impressa-service .impressa-service-right {
+    max-width: 60%;
+  }
+}
+#impressa-services-area .impressa-service .impressa-service-right .impressa-service-title {
+  font-size: 4.8em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+  margin-top: 1em;
+}
+@media (max-width: 768px) {
+  #impressa-services-area .impressa-service .impressa-service-right .impressa-service-title {
+    margin-top: 0;
+  }
+}
+#impressa-services-area .impressa-service .impressa-service-right .impressa-service-price {
+  font-size: 3.6em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+  margin-top: 0.66em;
+  color: #B69B10;
+}
+#impressa-services-area .impressa-service .impressa-service-right .impressa-service-description {
+  font-size: 2em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+  margin-top: 1.8em;
+}
+@media (max-width: 768px) {
+  #impressa-services-area .impressa-service .impressa-service-right .impressa-service-description {
+    margin-top: 1em;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+}
+#impressa-services-area .impressa-service .impressa-service-right .impressa-service-stars {
+  font-size: 7.2em;
+  color: #B69B10;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.65;
+}
+@media (max-width: 992px) {
+  #impressa-services-area .impressa-service .impressa-service-right .impressa-service-stars {
+    bottom: -1.166em;
+  }
+}
+#impress-contact-area {
+  font-size: var(--sub-div-root-fz);
+  margin-top: 31em;
+  background-color: #F2F8F4;
+  padding: 27em 12em 32em 12em;
+}
+#impress-contact-area #impressa-contact-top #impressa-contact-pic {
+  width: 43.3em;
+  height: 43.3em;
+  margin: 0px auto;
+}
+#impress-contact-area #impressa-contact-top #impressa-contact-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+#impress-contact-area #impressa-contact-top #impressa-contact-name {
+  text-align: center;
+  font-size: 4.8em;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  margin-top: 72px;
+}
+#impress-contact-area #impressa-contact-top #impressa-contact-description {
+  width: 70%;
+  margin: 0px auto;
+  font-size: 3.2em;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  margin-top: 2.25em;
+}
+#impress-contact-area #impressa-contact-bottom {
+  margin-top: 27em;
+  background-color: rgba(229, 229, 229, 0.47);
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.09);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  #impress-contact-area #impressa-contact-bottom {
+    flex-direction: column;
+  }
+}
+#impress-contact-area #impressa-contact-bottom #impressa-contact-bottom-left {
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+#impress-contact-area #impressa-contact-bottom #impressa-contact-bottom-left #impressa-contact-icon {
+  font-size: 6em;
+  color: white;
+  height: 2.13em;
+  width: 2.13em;
+  background-color: #2CC232;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: -1em;
+  transform: translateX(-50%);
+}
+#impress-contact-area #impressa-contact-bottom #impressa-contact-bottom-left #impressa-contact-icon i {
+  display: block;
+}
+#impress-contact-area #impressa-contact-bottom #impressa-contact-bottom-left #impressa-contact-name {
+  font-size: 4.8em;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  margin-top: 2.08em;
+}
+#impress-contact-area #impressa-contact-bottom #impressa-contact-bottom-left #impressa-contact-description {
+  font-size: 3.2em;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  margin-bottom: 7.5em;
+  margin-top: 2.5em;
+}
+#impress-contact-area #impressa-contact-bottom #impressa-contact-bottom-right {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  font-size: var(--sub-div-root-fz);
+}
+#impress-contact-area #impressa-contact-bottom #impressa-contact-bottom-right #impressa-contact-icon {
+  font-size: 6em;
+  color: white;
+  height: 2.13em;
+  width: 2.13em;
+  background-color: #2CC232;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 50%;
+  top: -1em;
+  transform: translateX(50%);
+}
+#impress-contact-area #impressa-contact-bottom #impressa-contact-bottom-right #impressa-contact-icon i {
+  display: block;
+}
+#impress-contact-area #impressa-contact-bottom #impressa-contact-bottom-right #impressa-contact-name {
+  font-size: 4.8em;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  margin-top: 2.08em;
+}
+#impress-contact-area #impressa-contact-bottom #impressa-contact-bottom-right #impressa-contact-description {
+  font-size: 3.2em;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: 0.1em;
+  margin-bottom: 7.5em;
+  margin-top: 2.5em;
+}
+#impressa-reviews-area {
+  font-size: var(--sub-div-root-fz);
+  padding: var(--main-body-margin);
+  padding-top: 22em;
+  padding-bottom: 22em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  #impressa-reviews-area {
+    flex-direction: column;
+  }
+}
+#impressa-reviews-area #impressa-review-left {
+  flex: 1;
+  padding: 22em 7.2em;
+  text-align: center;
+}
+#impressa-reviews-area #impressa-review-left .impressa-stars {
+  font-size: var(--reviews-star-fz);
+  letter-spacing: 0.33em;
+}
+#impressa-reviews-area #impressa-review-left .impressa-stars i {
+  color: #CCBD61;
+}
+#impressa-reviews-area #impressa-review-left #bottom-stars {
+  margin-top: 2.75em;
+}
+#impressa-reviews-area #impressa-review-left #impressa-reviews-title {
+  font-size: 6.4em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.2em;
+  margin-top: 1.125em;
+}
+#impressa-reviews-area #impressa-review-left #impressa-reviews-description {
+  font-size: 2.4em;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  margin-top: 2em;
+}
+@media (max-width: 768px) {
+  #impressa-reviews-area #impressa-review-left #impressa-reviews-description {
+    font-size: 3em;
+  }
+}
+#impressa-reviews-area #impressa-review-right {
+  flex: 1;
+}
+#impressa-reviews-area #impressa-review-right .impressa-review {
+  display: flex;
+  margin-top: 6.4em;
+  background-color: white;
+}
+#impressa-reviews-area #impressa-review-right .impressa-review .review-green-bar {
+  background-color: #2CC232;
+  width: 1.4em;
+}
+#impressa-reviews-area #impressa-review-right .impressa-review .impressa-review-core {
+  padding: 3em 2.2em 2.4em 5em;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.08);
+}
+#impressa-reviews-area #impressa-review-right .impressa-review .impressa-review-core .impressa-review-description {
+  font-size: 2.4em;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0.075em;
+}
+@media (max-width: 768px) {
+  #impressa-reviews-area #impressa-review-right .impressa-review .impressa-review-core .impressa-review-description {
+    font-size: 3em;
+  }
+}
+#impressa-reviews-area #impressa-review-right .impressa-review .impressa-review-core .impressa-review-author {
+  display: flex;
+  gap: 1.6em;
+  margin-top: 3.2em;
+  align-items: center;
+}
+#impressa-reviews-area #impressa-review-right .impressa-review .impressa-review-core .impressa-review-author .impressa-review-author-pic {
+  width: 7.5em;
+  height: 7.5em;
+}
+#impressa-reviews-area #impressa-review-right .impressa-review .impressa-review-core .impressa-review-author .impressa-review-author-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+#impressa-reviews-area #impressa-review-right .impressa-review .impressa-review-core .impressa-review-author .impressa-review-author-name {
+  font-size: 2.4em;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+}
+@media (max-width: 768px) {
+  #impressa-reviews-area #impressa-review-right .impressa-review .impressa-review-core .impressa-review-author .impressa-review-author-name {
+    font-size: 3.5em;
+  }
+}
+#impressa-reviews-area #impressa-review-right .impressa-review .impressa-review-core .impressa-review-author .impressa-review-author-name .author-role {
+  color: #127A16;
+}
+
+/* ------------------------ Media querries--------------------------   */
+
+/*# sourceMappingURL=newimpressa.css.map */

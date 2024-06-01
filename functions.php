@@ -6,7 +6,15 @@ function ceyms_enqueue_scripts() {
 	
 	wp_enqueue_style( 'dummycss', get_stylesheet_directory_uri() . '/css/styles.css', '', '1.0.99', 'all' );
 	//wp_enqueue_script( 'dummyjs', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ), '1.0.8', true );
-	
+	wp_enqueue_style( 'headercss', get_stylesheet_directory_uri() . '/css/sass/header.css', '', '1.0.99', 'all' );
+	wp_enqueue_style( 'footercss', get_stylesheet_directory_uri() . '/css/sass/footer.css', '', '1.0.99', 'all' );
+	wp_enqueue_style( 'frontpagecss', get_stylesheet_directory_uri() . '/css/sass/newceylon.css', '', '1.0.99', 'all' );
+	wp_enqueue_style( 'membercss', get_stylesheet_directory_uri() . '/css/sass/styleremem.css', '', '1.0.99', 'all' );
+	wp_enqueue_style( 'impressacss', get_stylesheet_directory_uri() . '/css/sass/newimpressa.css', '', '1.0.99', 'all' );
+	wp_enqueue_style( 'blogcss', get_stylesheet_directory_uri() . '/css/sass/newblog.css', '', '1.0.99', 'all' );
+
+	wp_enqueue_style( 'boostrapicons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css', '', '1.0.99', 'all' );
+
 	wp_register_script('mainjs',get_template_directory_uri().'/js/main.js',array('jquery'),'1.0.16',true);
 	wp_enqueue_script('mainjs');
 

@@ -1,0 +1,212 @@
+:root {
+  --main-body-margin:0px 120px 0px 120px;
+  --footer-padding:20px 120px 20px 120px;
+  --logo-width:120px;
+  --logo-fz:20px;
+  --nav-li-fz:22px;
+  --footer-section-title-fz:16px;
+  --footer-section-title-mb:24px;
+  --footer-li-fz:14px;
+  --footer-li-mb:14px;
+  --member-name-fz:36px;
+  --member-role-fz:24px;
+  --service-title-fz:48px;
+  --service-description-fz:24px;
+  --input-text-fz:24px;
+  --input-btn-fz:24px;
+}
+
+@media (max-width: 1400px) {
+  :root {
+    --main-body-margin:0px 100px 0px 100px;
+    --footer-padding:20px 100px 20px 100px;
+    --logo-width:100px;
+    --logo-fz:18px;
+    --nav-li-fz:20px;
+    --member-name-fz:34px;
+    --member-role-fz:22px;
+    --service-title-fz:44px;
+    --service-description-fz:22px;
+    --input-text-fz:22px;
+    --input-btn-fz:22px;
+  }
+}
+@media (max-width: 1200px) {
+  :root {
+    --main-body-margin:0px 80px 0px 80px;
+    --footer-padding:20px 80px 20px 80px;
+    --logo-width:80px;
+    --logo-fz:16px;
+    --nav-li-fz:18px;
+    --member-name-fz:32px;
+    --member-role-fz:20px;
+    --service-title-fz:42px;
+    --service-description-fz:20px;
+    --input-text-fz:20px;
+    --input-btn-fz:20px;
+  }
+}
+@media (max-width: 992px) {
+  :root {
+    --main-body-margin:0px 60px 0px 60px;
+    --footer-padding:20px 60px 20px 60px;
+    --logo-width:60px;
+    --logo-fz:14px;
+    --nav-li-fz:16px;
+    --member-name-fz:30px;
+    --member-role-fz:18px;
+    --service-title-fz:40px;
+    --service-description-fz:18px;
+    --input-text-fz:18px;
+    --input-btn-fz:18px;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --main-body-margin:0px 40px 0px 40px;
+    --footer-padding:20px 40px 20px 40px;
+    --member-name-fz:28px;
+    --member-role-fz:16px;
+    --service-title-fz:38px;
+    --service-description-fz:16px;
+    --input-text-fz:16px;
+    --input-btn-fz:16px;
+  }
+}
+@media (max-width: 576px) {
+  :root {
+    --member-name-fz:20px;
+    --member-role-fz:14px;
+    --service-title-fz:24px;
+    --service-description-fz:14px;
+    --input-text-fz:14px;
+    --input-btn-fz:14px;
+  }
+}
+/* Css reset */
+/*  -------------------sass  Css------------------  */
+#member-details-area {
+  margin: var(--main-body-margin);
+  position: relative;
+  margin-top: 90px;
+}
+
+#member-middle {
+  position: relative;
+}
+#member-middle #member-page-pic {
+  height: 30%;
+  width: 30%;
+  max-width: 440px;
+  margin: 0px auto;
+}
+#member-middle #member-page-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+#member-middle-details #member-page-name {
+  text-align: center;
+  font-size: var(--member-name-fz);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+  margin-top: 0.66em;
+}
+#member-middle-details #member-page-role {
+  text-align: center;
+  font-size: var(--member-role-fz);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  margin-top: 0.5em;
+}
+
+#member-middle::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 30%;
+  background-color: #17BC59;
+}
+
+#member-middle::after {
+  position: absolute;
+  content: "";
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 30%;
+  background-color: #17BC59;
+}
+
+.member-page-service {
+  margin: var(--main-body-margin);
+  font-size: var(--service-title-fz);
+  flex-grow: 1;
+  margin-top: 3em;
+  margin-bottom: 6em;
+}
+
+.member-page-service-title {
+  font-size: var(--service-title-fz);
+  line-height: 1.2;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+
+#member-page-service-description {
+  font-size: var(--service-description-fz);
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  margin-top: 2em;
+  max-width: 1000px;
+}
+
+#member-page-service-input-form {
+  margin-left: 12px;
+}
+#member-page-service-input-form .member-page-input-text {
+  display: block;
+  font-size: var(--input-text-fz);
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  width: 50%;
+  height: 3.2em;
+  min-width: 260px;
+  max-width: 1000px;
+  margin-top: 3em;
+  border-radius: 0.33em;
+  text-indent: 1.8em;
+  border-color: #114727;
+}
+#member-page-service-input-form .member-page-input-text::placeholder {
+  font-size: var(--input-text-fz);
+  text-indent: 1.8em;
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+#member-page-service-input-form .memeber-page-service-submit-btn {
+  margin-top: 2em;
+  font-size: var(--input-btn-fz);
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  padding: 0.4em 0.8em;
+  background-color: #17BC59;
+  border: none;
+  color: white;
+}
+
+/* ------------------------ Media querries--------------------------   */
+
+/*# sourceMappingURL=styleremem.css.map */
