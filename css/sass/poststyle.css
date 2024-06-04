@@ -1,0 +1,175 @@
+:root {
+  --post-rel-fz:10px;
+}
+
+@media (max-width: 1400px) {
+  :root {
+    --post-rel-fz:9px;
+  }
+}
+@media (max-width: 1200px) {
+  :root {
+    --post-rel-fz:8px;
+  }
+}
+@media (max-width: 992px) {
+  :root {
+    --post-rel-fz:7px;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --post-rel-fz:6px;
+  }
+}
+@media (max-width: 576px) {
+  :root {
+    --post-rel-fz:5px;
+  }
+}
+@media (max-width: 375px) {
+  :root {
+    --post-rel-fz:4px;
+  }
+}
+.post-thumb-wrapper {
+  font-size: var(--post-rel-fz);
+}
+.post-thumb-wrapper .post-featured-img {
+  margin-top: 4.8em;
+}
+
+.post-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 48px;
+  margin-top: 32px;
+  align-content: start;
+}
+@media (max-width: 768px) {
+  .post-content-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+.post-content-wrapper .post-social-m-box {
+  font-size: var(--post-rel-fz);
+  height: 300px;
+  padding-inline: 12px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: space-around;
+  justify-content: center;
+  background-color: #F5F5F5;
+}
+@media (max-width: 768px) {
+  .post-content-wrapper .post-social-m-box {
+    grid-row: 2/3;
+    margin-bottom: 24px;
+    height: 150px;
+  }
+}
+.post-content-wrapper .post-social-m-box .post-yt-sec .yt-para {
+  font-size: 2.4em;
+  letter-spacing: 0.24px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+.post-content-wrapper .post-social-m-box .post-yt-sec .watch-now-btn-div {
+  width: 18em;
+  height: 6em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  margin-top: 24px;
+}
+.post-content-wrapper .post-social-m-box .post-yt-sec .watch-now-btn-div .watch-now-btn {
+  font-size: 2.4em;
+  letter-spacing: 0.24px;
+  line-height: 1.1;
+  font-weight: 500;
+  background-color: rgb(28, 34, 31);
+  color: white;
+  border: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.post-content-wrapper .post-social-m-box .post-social-bx-divider {
+  border-bottom: 1px solid grey;
+  margin-inline: 12px;
+}
+.post-content-wrapper .post-social-m-box .post-social-box-icons {
+  font-size: 2.4em;
+  letter-spacing: 0.24px;
+  line-height: 1.1;
+  font-weight: 500;
+  margin-inline: auto;
+}
+.post-content-wrapper .post-social-m-box .post-social-box-icons .social-icons {
+  font-size: 1.1em;
+}
+.post-content-wrapper .post-social-m-box .post-social-box-icons .social-icons:not(:last-child) {
+  margin-right: 1.5em;
+}
+.post-content-wrapper .post-article {
+  font-size: var(--post-rel-fz);
+  font-family: "Roboto Serif";
+}
+.post-content-wrapper .post-article .post-title {
+  font-size: 5.4em;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.post-content-wrapper .post-article .author-details {
+  display: flex;
+  justify-content: start;
+  gap: 24px;
+  align-items: center;
+  margin-top: 24px;
+}
+.post-content-wrapper .post-article .author-details .author-pic {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+}
+.post-content-wrapper .post-article .author-details .author-name {
+  font-size: 3em;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #114727;
+  text-decoration: underline;
+}
+.post-content-wrapper .post-article .author-details .written-date {
+  font-size: 3em;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #114727;
+}
+.post-content-wrapper .post-article .post-para {
+  margin-top: 24px;
+  font-size: 2.4em;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+.post-content-wrapper .post-article .post-cetegories {
+  margin-bottom: 48px;
+  margin-top: 60px;
+  font-size: 3em;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #114727;
+}
+.post-content-wrapper .post-article .post-cetegories a {
+  margin-right: 24px;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=poststyle.css.map */

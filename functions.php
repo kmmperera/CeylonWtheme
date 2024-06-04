@@ -29,6 +29,9 @@ function overidewoocomstyles(){
 	$num2=rand(1,999);
 	$num3=($num1+$num2)/2;
 	wp_enqueue_style("mywoostyles",get_stylesheet_directory_uri().'/css/mywoo.css',array('woocommerce-general','woocommerce-layout','woocommerce-smallscreen'),$num3,'all');
+
+	wp_enqueue_style("poststyles",get_stylesheet_directory_uri().'/css/sass/poststyle.css','',$num3,'all');
+
 }
 add_action('wp_enqueue_scripts','ceyms_enqueue_scripts',2000);
 
