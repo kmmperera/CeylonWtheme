@@ -44,7 +44,7 @@ add_action('wp_enqueue_scripts','ceyms_enqueue_scripts',2000);
 add_action('wp_enqueue_scripts','overidewoocomstyles');
 
 function custom_excerpt_length( $length ) {
-	return 30;
+	return 20;
 	}
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 	

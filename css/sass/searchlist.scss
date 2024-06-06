@@ -64,7 +64,7 @@
     text-align: center;
     background-color: rgb(255, 255, 255);
     margin-inline: auto;
-    padding: 24px 0px;
+    padding: 0.83em 0px;
 
 
 }
@@ -77,68 +77,95 @@
     text-align: left;
     margin-top: 3em;
 }
-
+.post-link-a{
+    display: contents;
+}
 .search-list-posts { 
-       
-	.search-post-wrapper { 
+    
+            .search-post-wrapper { 
 
-        display: flex;
-       
-        gap: 5.4em;
-        font-size: var(--search-list-rel-fz);
-        margin-top: 4.8em;
-		.search-post-left { 
-            width: 37.6em;
-            height: 24.4em;
-            flex-shrink: 0;
-			img { 
+                display: flex;
+                justify-content: space-between;
+                gap: 5.4em;
+                font-size: var(--search-list-rel-fz);
+                margin-top: 4.8em;
+                position: relative;
+                .search-post-left { 
+                    //width: 37.6em;
+                //  height: 24.4em;
+
+                    aspect-ratio:376/244;
                 
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-			}
-		}
+                   // flex-shrink: 0;
+                    flex: 1;
+                    img { 
+                        
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
 
-		.search-post-right { 
-            flex-grow: 1; 
-            display: flex;
-            flex-direction: column;
-            
-			.search-post-title { 
-                font-size:4em ;
-                letter-spacing: 0.4px;
-                line-height:1.2;
-                font-weight: 300;
-			}
+                .search-post-right { 
+                    flex-grow: 1; 
+                    display: flex;
+                    flex-direction: column;
+                
+                    flex: 2.6382;
+                    
+                    .search-post-title { 
+                        font-size:4em ;
+                        letter-spacing: 0.4px;
+                        line-height:1.2;
+                        font-weight: 300;
 
-			.search-post-excerpt { 
-                font-size:2em ;
-                letter-spacing: 0.4px;
-                line-height:1.2;
-                font-weight: 300;
-                flex-grow: 1;
-                margin-top:0.9em;
-				p { 
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                    
+                    
+                    }
 
-				}
-			}
+                    .search-post-excerpt { 
+                        font-size:2em ;
+                        letter-spacing: 0.4px;
+                        line-height:1.2;
+                        font-weight: 300;
+                        flex-grow: 1;
+                        margin-top:0.9em;
 
-			.search-post-author { 
-                font-size:2em ;
-                letter-spacing: 0.4px;
-                line-height:1.2;
-                font-weight: 500;
-				.search-post-author-name { 
+                    
+                        p { 
 
-				}
+                        }
+                    }
 
-				.search-post-date { 
+                    .search-post-author { 
+                        font-size:2em ;
+                        letter-spacing: 0.4px;
+                        line-height:1.2;
+                        font-weight: 500;
+                        .search-post-author-name { 
 
-				}
-			}
-		}
-    }
+                        }
+
+                        .search-post-date { 
+
+                        }
+                    }
+                }
+                .post-link-a{
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
    
+    
     .search-post-divider{
         border-bottom: 0.5px solid rgba(0,0,0,0.22);
         margin-top: 4.8em;

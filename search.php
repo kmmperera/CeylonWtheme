@@ -5,11 +5,11 @@
     
 
         <div class="search-list-title ">
-                Posts for Category : Category Name
+                Search results for : Search String
         </div>
 
         <div class="search-list-description ">
-                30 results for “Category name”
+                30 results for “Search String”
         </div>
         <div class="search-list-posts ">
 
@@ -21,12 +21,12 @@
                         <?php if ( has_post_thumbnail() ) :
                                             $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' ); ?>
                                             <img   class="" src="<?php echo $featured_image[0]; ?>" alt="" />
-                        <?php else: ?>
 
-                                <?php  $featured_image=  get_template_directory_uri().'/images/logo.jpg'; ?>
-                                <img   class="" src="<?php echo $featured_image; ?>" alt="" />
+                         <?php else: ?>
 
-                       <?php  endif; ?>
+                                        <?php  $featured_image=  get_template_directory_uri().'/images/logo.jpg'; ?>
+                                        <img   class="" src="<?php echo $featured_image; ?>" alt="" />                   
+                        <?php endif; ?>
                     </div>
                     <div class="search-post-right">
                         <div class="search-post-title">
