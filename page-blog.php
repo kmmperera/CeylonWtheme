@@ -89,9 +89,11 @@
                         Browse through our blog
                     </div>
                     <div id="search-right">
-                        <i class="bi bi-search"></i>
+                        <!-- <i class="bi bi-search"></i>
                         <input class="searchinput" type="text" placeholder="Search anything...">
-                        <input class="searchbtn" type="submit" value="Search">
+                        <input class="searchbtn" type="submit" value="Search"> -->
+
+                          <?php get_search_form(); ?>
                     </div>
                 </div>
                 <div id="articles-area">
@@ -102,106 +104,169 @@
 
 
                         <div id="article-area-left">
+
+
+                            <?php 
+
+                                    $featuredmain= new WP_Query(
+                                        array(
+                                            'post_type' => 'post',
+                                            "posts_per_page" => 1,
+                                            
+                                            'tax_query' => array(
+                                                array(
+                                                    'taxonomy' => 'category',
+                                                    'terms' => 'books',
+                                                    'field' => 'slug',
+                                                )
+                                            )
+                                        )   
+                                        );
+
+                            ?>
+                             <?php if($featuredmain->have_posts() ): while( $featuredmain->have_posts() ): $featuredmain->the_post();?>           
                             <div class="article-pic">
-                                <img src="<?php echo get_template_directory_uri().'/images/ceylon-top-1.png'?>"  alt="">
+                                    <?php if ( has_post_thumbnail() ) :
+                                                    $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' ); ?>
+                                                    <img   class="" src="<?php echo $featured_image[0]; ?>" alt="" />
+                                    <?php else: ?>
+
+                                        <?php  $featured_image=  get_template_directory_uri().'/images/logo.jpg'; ?>
+                                        <img   class="" src="<?php echo $featured_image; ?>" alt="" />
+
+                                    <?php  endif; ?>
+
                             </div>
                             <div class="article-date">
-                                20 March 2024
+                                    <?php the_time( 'F jS, Y' ); ?> 
                             </div>
                             <div class="article-title">
-                                How to Make 730 for Your Family
+                                    <?php the_title(); ?>
                             </div>
                             <div class="article-description">
-                                First collect all your income of your family .You can find it using SPID.First collect all your income of your family .You
-                                can find it using.First collect all your income of your family .You can find it using SPID.First
-                                collect all your income of your family .You can find it using.First collect all your income
-                                of your family .You can find it using SPID.
-
+                                    <?php echo wp_trim_words(get_the_excerpt(),64); ?> 
 
                             </div>
                             <div class="article-author-details">
                                 <div class="autor-pic">
-                                    <img src="<?php echo get_template_directory_uri().'/images/face4.png'?>" alt="">
+                                    
+                                            <?php  
+                                                    if( get_avatar(get_the_author_meta('ID')) !== "" ){
+
+                                                        $avatar=get_avatar(get_the_author_meta('ID'));
+                                                        echo $avatar;
+                                                        ?>
+                                                    
+                                                    <?php  }
+                                                    else{
+                                                        
+                                                        $dummyimg=get_template_directory_uri().'/images/nopic.jpg';
+                                                        ?>
+                                                        <img src="<?php echo $dummyimg ?>" > 
+                                                        
+                                                    <?php  }
+                                            
+                                            ?>
+
                                 </div>
                                 <div class="author-right">
                                     <div class="author-written-by">
                                         Written by
                                     </div>
                                     <div class="author-name">
-                                        Morgan Piers
+                                         <?php the_author_posts_link(); ?>
                                     </div>
 
                                 </div>
                             </div>
+                            <a class="top-left-article-post-link-a" href="<?php the_permalink(); ?>"></a>                              
+                             <?php endwhile; else: endif;?>
+                             <?php wp_reset_postdata(); ?>
                         </div>
                         <div id="article-area-right">
+
+                          <?php 
+
+                                $featuredright= new WP_Query(
+                                    array(
+                                        'post_type' => 'post',
+                                        "posts_per_page" => 2,
+                                        
+                                        'tax_query' => array(
+                                            array(
+                                                'taxonomy' => 'category',
+                                                'terms' => 'books',
+                                                'field' => 'slug',
+                                            )
+                                        )
+                                    )   
+                                    );
+
+                         ?>
+                        <?php if($featuredright->have_posts() ): while( $featuredright->have_posts() ): $featuredright->the_post();?>           
+
                             <div class="right-article-conatiner">
 
 
                                 <div class="article-pic">
-                                    <img src="<?php echo get_template_directory_uri().'/images/ceylon-top-2.png'?>" alt="">
+                                        <?php if ( has_post_thumbnail() ) :
+                                                            $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' ); ?>
+                                                            <img   class="" src="<?php echo $featured_image[0]; ?>" alt="" />
+                                            <?php else: ?>
+
+                                                <?php  $featured_image=  get_template_directory_uri().'/images/logo.jpg'; ?>
+                                                <img   class="" src="<?php echo $featured_image; ?>" alt="" />
+
+                                        <?php  endif; ?>
                                 </div>
                                 <div class="right-article-details">
                                     <div class="article-date">
-                                        20 March 2024
+                                            <?php the_time( 'F jS, Y' ); ?> 
                                     </div>
                                     <div class="article-title">
-                                        How to Make 730 for Your Family
+                                            <?php the_title(); ?>
                                     </div>
                                     <div class="article-description">
-                                        First collect all your income of your family .You can find it using SPID.First collect all your income of your family .You
-                                        can find it using
-                                    </div>
+                                             <?php echo wp_trim_words(get_the_excerpt(),26); ?>                                     </div>
                                     <div class="article-author-details">
                                         <div class="autor-pic">
-                                            <img src="<?php echo get_template_directory_uri().'/images/face5.png'?>"  alt="">
+
+
+                                             <?php  
+                                                    if( get_avatar(get_the_author_meta('ID')) !== "" ){
+
+                                                        $avatar=get_avatar(get_the_author_meta('ID'));
+                                                        echo $avatar;
+                                                        ?>
+                                                    
+                                                    <?php  }
+                                                    else{
+                                                        
+                                                        $dummyimg=get_template_directory_uri().'/images/nopic.jpg';
+                                                        ?>
+                                                        <img src="<?php echo $dummyimg ?>" > 
+                                                        
+                                                    <?php  }
+                                            
+                                            ?>
+                                       
+                                       
                                         </div>
                                         <div class="author-right">
                                             <div class="author-written-by">
                                                 Written by
                                             </div>
                                             <div class="author-name">
-                                                Morgan Piers
+                                                    <?php the_author_posts_link(); ?>
                                             </div>
 
                                         </div>
                                     </div>
                                 </div>
-
+                                <a class="right-article-post-link-a" href="<?php the_permalink(); ?>"></a>                            
                             </div>
-                            <div class="right-article-conatiner">
-
-
-                                <div class="article-pic">
-                                    <img src="<?php echo get_template_directory_uri().'/images/ceylon-top-3.png'?>"  alt="">
-                                </div>
-                                <div class="right-article-details">
-                                    <div class="article-date">
-                                        20 March 2024
-                                    </div>
-                                    <div class="article-title">
-                                        How to Make 730 for Your Family
-                                    </div>
-                                    <div class="article-description">
-                                        First collect all your income of your family .You can find it using SPID.First collect all your income of your family .You
-                                        can find it using
-                                    </div>
-                                    <div class="article-author-details">
-                                        <div class="autor-pic">
-                                            <img src="<?php echo get_template_directory_uri().'/images/face4.png'?>"  alt="">
-                                        </div>
-                                        <div class="author-right">
-                                            <div class="author-written-by">
-                                                Written by
-                                            </div>
-                                            <div class="author-name">
-                                                Morgan Piers
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <?php endwhile; else: endif;?>
+                        <?php wp_reset_postdata(); ?>  
                         </div>
                     </div>
 
@@ -211,33 +276,84 @@
                         Latest Articles
                     </div>
                     <div id="latest-articles-container">
+
+                   
+                                 
+                         <?php 
+                                 $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                                $latestposts= new WP_Query(
+                                    array(
+                                        'post_type' => 'post',
+                                        "posts_per_page" => 6,
+                                        "paged"  => $current_page ,
+                                        'tax_query' => array(
+                                            array(
+                                                'taxonomy' => 'category',
+                                                'terms' => 'teachers',
+                                                'field' => 'slug',
+                                            )
+                                        )
+                                    )   
+                                    );
+                                    
+
+                        ?>
+
+                         <?php if($latestposts->have_posts() ): while( $latestposts->have_posts() ): $latestposts->the_post();?>           
+
                         <div class="latest-article">
 
 
                             <div class="article-pic">
-                                <img src="<?php echo get_template_directory_uri().'/images/latest-1.png'?>"  alt="">
+                                    <?php if ( has_post_thumbnail() ) :
+                                                                    $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' ); ?>
+                                                                    <img   class="" src="<?php echo $featured_image[0]; ?>" alt="" />
+                                                    <?php else: ?>
+
+                                                        <?php  $featured_image=  get_template_directory_uri().'/images/logo.jpg'; ?>
+                                                        <img   class="" src="<?php echo $featured_image; ?>" alt="" />
+
+                                     <?php  endif; ?>
+
                             </div>
                             <div class="right-article-details">
                                 <div class="article-date">
-                                    20 March 2024
+                                         <?php the_time( 'F jS, Y' ); ?> 
                                 </div>
                                 <div class="article-title">
-                                    How to Make 730 for Your Family
+                                        <?php the_title(); ?>
                                 </div>
                                 <div class="article-description">
-                                    First collect all your income of your family .You can find it using SPID.First collect all your income of your family .You
-                                    can find it using
+                                     <?php echo wp_trim_words(get_the_excerpt(),26); ?> 
                                 </div>
                                 <div class="article-author-details">
                                     <div class="autor-pic">
-                                        <img src="<?php echo get_template_directory_uri().'/images/face2.jpg'?>" alt="">
-                                    </div>
+                                            <?php  
+                                                    if( get_avatar(get_the_author_meta('ID')) !== "" ){
+
+                                                        $avatar=get_avatar(get_the_author_meta('ID'));
+                                                        echo $avatar;
+                                                        ?>
+                                                    
+                                                    <?php  }
+                                                    else{
+
+                                                        $dummyimg=get_template_directory_uri().'/images/nopic.jpg';
+                                                        ?>
+                                                        <img src="<?php echo $dummyimg ?>" > 
+                                                        
+                                                    <?php  }
+                                            
+                                            ?>
+                                   
+                                     </div>
+
                                     <div class="author-right">
                                         <div class="author-written-by">
                                             Written by
                                         </div>
                                         <div class="author-name">
-                                            Morgan Piers
+                                                 <?php the_author_posts_link(); ?>
                                         </div>
 
                                     </div>
@@ -245,188 +361,11 @@
 
 
                             </div>
-
+                            <a class="latest-post-link-a" href="<?php the_permalink(); ?>"></a>                            
                         </div>
-                        <div class="latest-article">
-
-
-                            <div class="article-pic">
-                                <img src="<?php echo get_template_directory_uri().'/images/latest-2.png'?>" alt="">
-                            </div>
-                            <div class="right-article-details">
-                                <div class="article-date">
-                                    20 March 2024
-                                </div>
-                                <div class="article-title">
-                                    How to Make 730 for Your Family
-                                </div>
-                                <div class="article-description">
-                                    First collect all your income of your family .You can find it using SPID.First collect all your income of your family .You
-                                    can find it using
-                                </div>
-                                <div class="article-author-details">
-                                    <div class="autor-pic">
-                                        <img src="<?php echo get_template_directory_uri().'/images/face2.jpg'?>" alt="">
-                                    </div>
-                                    <div class="author-right">
-                                        <div class="author-written-by">
-                                            Written by
-                                        </div>
-                                        <div class="author-name">
-                                            Morgan Piers
-                                        </div>
-
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-                        </div>
-                        <div class="latest-article">
-
-
-                            <div class="article-pic">
-                                <img src="<?php echo get_template_directory_uri().'/images/latest-3.png'?>"  alt="">
-                            </div>
-                            <div class="right-article-details">
-                                <div class="article-date">
-                                    20 March 2024
-                                </div>
-                                <div class="article-title">
-                                    How to Make 730 for Your Family
-                                </div>
-                                <div class="article-description">
-                                    First collect all your income of your family .You can find it using SPID.First collect all your income of your family .You
-                                    can find it using
-                                </div>
-                                <div class="article-author-details">
-                                    <div class="autor-pic">
-                                        <img src="<?php echo get_template_directory_uri().'/images/face2.jpg'?>" alt="">
-                                    </div>
-                                    <div class="author-right">
-                                        <div class="author-written-by">
-                                            Written by
-                                        </div>
-                                        <div class="author-name">
-                                            Morgan Piers
-                                        </div>
-
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-                        </div>
-                        <div class="latest-article">
-
-
-                            <div class="article-pic">
-                                <img src="<?php echo get_template_directory_uri().'/images/latest-4.png'?>"  alt="">
-                            </div>
-                            <div class="right-article-details">
-                                <div class="article-date">
-                                    20 March 2024
-                                </div>
-                                <div class="article-title">
-                                    How to Make 730 for Your Family
-                                </div>
-                                <div class="article-description">
-                                    First collect all your income of your family .You can find it using SPID.First collect all your income of your family .You
-                                    can find it using
-                                </div>
-                                <div class="article-author-details">
-                                    <div class="autor-pic">
-                                        <img src="<?php echo get_template_directory_uri().'/images/face3.jpg'?>" alt="">
-                                    </div>
-                                    <div class="author-right">
-                                        <div class="author-written-by">
-                                            Written by
-                                        </div>
-                                        <div class="author-name">
-                                            Morgan Piers
-                                        </div>
-
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-                        </div>
-                        <div class="latest-article">
-
-
-                            <div class="article-pic">
-                                <img src="<?php echo get_template_directory_uri().'/images/latest-5.png'?>"  alt="">
-                            </div>
-                            <div class="right-article-details">
-                                <div class="article-date">
-                                    20 March 2024
-                                </div>
-                                <div class="article-title">
-                                    How to Make 730 for Your Family
-                                </div>
-                                <div class="article-description">
-                                    First collect all your income of your family .You can find it using SPID.First collect all your income of your family .You
-                                    can find it using
-                                </div>
-                                <div class="article-author-details">
-                                    <div class="autor-pic">
-                                        <img src="<?php echo get_template_directory_uri().'/images/face2.jpg'?>" alt="">
-                                    </div>
-                                    <div class="author-right">
-                                        <div class="author-written-by">
-                                            Written by
-                                        </div>
-                                        <div class="author-name">
-                                            Morgan Piers
-                                        </div>
-
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-                        </div>
-                        <div class="latest-article">
-
-
-                            <div class="article-pic">
-                                <img src="<?php echo get_template_directory_uri().'/images/latest-6.png'?>"  alt="">
-                            </div>
-                            <div class="right-article-details">
-                                <div class="article-date">
-                                    20 March 2024
-                                </div>
-                                <div class="article-title">
-                                    How to Make 730 for Your Family
-                                </div>
-                                <div class="article-description">
-                                    First collect all your income of your family .You can find it using SPID.First collect all your income of your family .You
-                                    can find it using
-                                </div>
-                                <div class="article-author-details">
-                                    <div class="autor-pic">
-                                        <img src="<?php echo get_template_directory_uri().'/images/face1.jpg'?>" alt="">
-                                    </div>
-                                    <div class="author-right">
-                                        <div class="author-written-by">
-                                            Written by
-                                        </div>
-                                        <div class="author-name">
-                                            Morgan Piers
-                                        </div>
-
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-                        </div>
+                       
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>  
 
 
                     </div>
@@ -441,55 +380,16 @@
 
 
                 <div id="pagination-area">
-                    <div id="pagination-left">
-                        <a href="#" class="pagination-navs">
-                            <i class="bi bi-arrow-left"></i>
-                            Prev
-
-                        </a>
-                    </div>
-                    <div id="pagination-middle">
-                        <span class="pagination-num active">
-                            1
-                        </span>
-                        <span class="pagination-num">
-                            2
-                        </span>
-                        <span class="pagination-num">
-                            3
-                        </span>
-                        <span class="pagination-num">
-                            4
-                        </span>
-                        <span class="pagination-num">
-                            ...
-                        </span>
-                        <span class="pagination-num">
-                            5
-                        </span>
-                        <span class="pagination-num">
-                            6
-                        </span>
-                        <span class="pagination-num">
-                            7
-                        </span>
-                        <span class="pagination-num">
-                            8
-                        </span>
-                        <span class="pagination-num">
-                            9
-                        </span>
-
-                    </div>
-                    <div id="pagination-right">
-                        <a href="#" class="pagination-navs">
-                            Next
-                            <i class="bi bi-arrow-right"></i>
-
-
-                        </a>
-                    </div>
+                        <?php 
+                     
+                      echo paginate_links(array(
+                          'total'=> $latestposts->max_num_pages,
+                          'next_text'=>'Next',
+                          'prev_text'=>'Prev',
+                      ));
+                        ?>
                 </div>
+                <?php  else: endif; ?>
             </div>
             <div class="h-padding" id="subscribe-area">
                 <div id="subscribe-icon">

@@ -6,7 +6,7 @@
 
 :root {
   --main-wrapper-margin: 0px 120px 0px 120px;
-  --hero-title:72px;
+  --blog-hero-title:72px;
   --search-width:30%;
   --section-heading-fz:28px;
   --section-heading-ls:1px;
@@ -26,13 +26,13 @@
 
 @media (max-width: 1400px) {
   :root {
-    --hero-title:60px;
+    --blog-hero-title:60px;
     --blog-div-fz:9px;
   }
 }
 @media (max-width: 1200px) {
   :root {
-    --hero-title:50px;
+    --blog-hero-title:50px;
     --hero-details-bg-fz:18px;
     --hero-details-sm-fz:14px;
     --hero-details-gap:20px;
@@ -41,7 +41,7 @@
 }
 @media (max-width: 992px) {
   :root {
-    --hero-title:36px;
+    --blog-hero-title:36px;
     --hero-details-bg-fz:16px;
     --hero-details-sm-fz:12px;
     --hero-details-gap:10px;
@@ -50,7 +50,7 @@
 }
 @media (max-width: 768px) {
   :root {
-    --hero-title:26px;
+    --blog-hero-title:26px;
     --hero-details-bg-fz:12px;
     --hero-details-sm-fz:10px;
     --hero-details-gap:10px;
@@ -61,7 +61,7 @@
 }
 @media (max-width: 576px) {
   :root {
-    --hero-title:26px;
+    --blog-hero-title:26px;
     --hero-details-bg-fz:12px;
     --hero-details-sm-fz:10px;
     --hero-details-gap:10px;
@@ -70,7 +70,7 @@
 }
 @media (max-width: 446px) {
   :root {
-    --hero-title:20px;
+    --blog-hero-title:20px;
   }
 }
 #main-container {
@@ -79,7 +79,7 @@
 
 /*  Hero title   */
 #hero-title {
-  font-size: var(--blog-div-fz);
+  font-size: var(--blog-hero-title);
 }
 @media (max-width: 992px) {
   #hero-title {
@@ -90,7 +90,7 @@
 #hero-title div {
   font-family: "Playfair Display", serif;
   font-weight: 400;
-  font-size: var(--hero-title);
+  font-size: var(--blog-hero-title);
   letter-spacing: 0.0555555556em;
   line-height: 1.1;
   margin-top: 0.33em;
@@ -406,11 +406,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 @media (max-width: 768px) {
   #articles-area #top-article-container #article-area-left {
     margin-bottom: 24px;
   }
+}
+#articles-area #top-article-container #article-area-left .top-left-article-post-link-a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 #articles-area #top-article-container #article-area-left .article-pic img {
   width: 100%;
@@ -440,6 +448,10 @@
   line-height: var(--post-heading-lh);
   letter-spacing: var(--post-heading-ls);
   margin-top: var(--post-heading-mt);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 #articles-area #top-article-container #article-area-left .article-description {
   font-size: var(--post-para-fz);
@@ -489,12 +501,20 @@
 #articles-area #top-article-container #article-area-right .right-article-conatiner {
   display: flex;
   gap: 30px;
+  position: relative;
 }
 @media (max-width: 992px) {
   #articles-area #top-article-container #article-area-right .right-article-conatiner {
     margin-bottom: 36px;
     gap: 12px;
   }
+}
+#articles-area #top-article-container #article-area-right .right-article-conatiner .right-article-post-link-a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 #articles-area #top-article-container #article-area-right .right-article-conatiner .article-pic {
   aspect-ratio: 333/296;
@@ -530,6 +550,10 @@
   line-height: var(--post-heading-lh);
   letter-spacing: var(--post-heading-ls);
   margin-top: var(--post-heading-mt);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 #articles-area #top-article-container #article-area-right .right-article-conatiner .right-article-details .article-description {
   font-size: var(--post-para-fz);
@@ -551,6 +575,7 @@
 #articles-area #top-article-container #article-area-right .right-article-conatiner .right-article-details .article-author-details .autor-pic img {
   aspect-ratio: 1/1;
   height: 44px;
+  width: 44px;
   border-radius: 100%;
   object-fit: cover;
 }
@@ -595,6 +620,14 @@
 }
 #latest-articles #latest-articles-container .latest-article {
   margin-top: 24px;
+  position: relative;
+}
+#latest-articles #latest-articles-container .latest-article .latest-post-link-a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 #latest-articles #latest-articles-container .latest-article .article-pic img {
   aspect-ratio: 438/312;
@@ -625,6 +658,10 @@
   line-height: var(--post-heading-lh);
   letter-spacing: var(--post-heading-ls);
   margin-top: var(--post-heading-mt);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 #latest-articles #latest-articles-container .latest-article .right-article-details .article-description {
   font-size: var(--post-para-fz);
@@ -642,6 +679,7 @@
 #latest-articles #latest-articles-container .latest-article .right-article-details .article-author-details .autor-pic img {
   aspect-ratio: 1/1;
   height: 44px;
+  width: 44px;
   border-radius: 100%;
   object-fit: cover;
 }
@@ -666,26 +704,43 @@
 
 /*  pagination area  */
 #pagination-area {
-  margin-top: 100px;
+  font-size: var(--blog-div-fz);
+  background-color: #fff;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 16px;
+  padding: 4px;
+  justify-content: center;
+  position: relative;
+  margin-top: 10em;
+  gap: 12px;
 }
-#pagination-area #pagination-left .bi-arrow-left {
-  margin-right: 12px;
-}
-#pagination-area #pagination-middle .pagination-num {
-  padding: 8px;
-  display: inline-block;
-  text-align: center;
+#pagination-area a, #pagination-area span {
+  font-size: 2.5em;
   border-radius: 8px;
+  padding: 8px;
 }
-#pagination-area #pagination-middle .pagination-num.active {
+#pagination-area .prev {
+  display: inline-flex;
+  gap: 12px;
+  position: absolute;
+  left: 0px;
+}
+#pagination-area .next {
+  display: inline-flex;
+  gap: 12px;
+  position: absolute;
+  right: 0px;
+}
+#pagination-area .prev::before {
+  content: "\f12f";
+  font-family: "Bootstrap-icons";
+}
+#pagination-area .next::after {
+  content: "\f138";
+  font-family: "Bootstrap-icons";
+}
+#pagination-area .page-numbers.current {
   background-color: #D9D9D9;
-}
-#pagination-area #pagination-right .bi-arrow-right {
-  margin-left: 12px;
 }
 
 /*  subscribe area  */
@@ -771,22 +826,6 @@
   }
   #subscribe-area #subscribe-details {
     width: 70%;
-  }
-}
-@media (max-width: 500px) {
-  #pagination-area {
-    font-size: 10px;
-  }
-  #pagination-area #pagination-right .bi-arrow-right {
-    margin: initial;
-    display: none;
-  }
-  #pagination-area #pagination-left .bi-arrow-left {
-    margin-right: initial;
-    display: none;
-  }
-  #pagination-area #pagination-middle {
-    text-align: center;
   }
 }
 

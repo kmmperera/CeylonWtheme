@@ -5,11 +5,16 @@
     
 
         <div class="search-list-title ">
-                Posts for Category : Category Name
+                Posts for Category : <?php single_cat_title(); ?>
         </div>
 
         <div class="search-list-description ">
-                30 results for “Category name”
+                <?php  
+                        global $wp_query; 
+                        echo $wp_query->found_posts;
+                ?>
+                
+                results for “<?php single_cat_title(); ?>”
         </div>
         <div class="search-list-posts ">
 
@@ -54,11 +59,11 @@
             </div>
 
             <?php endwhile; else: endif;?>
-
+            <?php wp_reset_postdata(); ?>
 
 
             <div class="search-post-pagination">
-                this is pagination
+                
                     <?php the_posts_pagination(); ?>
             </div>
         </div>

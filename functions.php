@@ -11,9 +11,10 @@ function ceyms_enqueue_scripts() {
 	wp_enqueue_style( 'frontpagecss', get_stylesheet_directory_uri() . '/css/sass/newceylon.css', '', '1.0.99', 'all' );
 	wp_enqueue_style( 'membercss', get_stylesheet_directory_uri() . '/css/sass/styleremem.css', '', '1.0.99', 'all' );
 	wp_enqueue_style( 'impressacss', get_stylesheet_directory_uri() . '/css/sass/newimpressa.css', '', '1.0.99', 'all' );
-	wp_enqueue_style( 'blogcss', get_stylesheet_directory_uri() . '/css/sass/newblog.css', '', '1.0.99', 'all' );
 
 	wp_enqueue_style( 'robotoserif', 'https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap', '', '1.0.99', 'all' );
+	wp_enqueue_style( 'robotoori', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap', '', '1.0.99', 'all' );
+	wp_enqueue_style( 'playfairdisplay', 'https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap', '', '1.0.99', 'all' );
 
 
 	wp_enqueue_style( 'boostrapicons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css', '', '1.0.99', 'all' );
@@ -37,6 +38,9 @@ function overidewoocomstyles(){
 
 	wp_enqueue_style("searchliststyles",get_stylesheet_directory_uri().'/css/sass/searchlist.css','',$num3,'all');
 
+	wp_enqueue_style( 'blogcss', get_stylesheet_directory_uri() . '/css/sass/newblog.css', '', $num3, 'all' );
+
+
 }
 add_action('wp_enqueue_scripts','ceyms_enqueue_scripts',2000);
 
@@ -44,10 +48,23 @@ add_action('wp_enqueue_scripts','ceyms_enqueue_scripts',2000);
 add_action('wp_enqueue_scripts','overidewoocomstyles');
 
 function custom_excerpt_length( $length ) {
-	return 20;
+	return 80;
 	}
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 	
+//add_action( 'pre_get_posts',  'set_posts_per_page'  );
+
+function set_posts_per_page( $query ) {
+
+  global $wp_the_query;
+
+  if ( ( ! is_admin() )  && ( is_page( 'blog' ) ) ) {
+    $query->set( 'posts_per_page', 6 );
+  }
+  
+
+  return $query;
+}
 
 
 function ceyms_process_post_type() {

@@ -5,11 +5,20 @@
     
 
         <div class="search-list-title ">
-                Search results for : Search String
+            <div class="search-bar-item">
+                 <?php get_search_form(); ?>
+            </div>
+               
         </div>
 
         <div class="search-list-description ">
-                30 results for “Search String”
+                <?php  
+                        global $wp_query; 
+                        echo $wp_query->found_posts;
+                ?>
+                
+                results for “<?php echo get_search_query(); ?>”
+       
         </div>
         <div class="search-list-posts ">
 
@@ -58,7 +67,7 @@
 
 
             <div class="search-post-pagination">
-                this is pagination
+               
                     <?php the_posts_pagination(); ?>
             </div>
         </div>
