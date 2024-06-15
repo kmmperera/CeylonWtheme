@@ -99,6 +99,7 @@
   width: 30%;
   max-width: 440px;
   margin: 0px auto;
+  aspect-ratio: 1/1;
 }
 #member-middle #member-page-pic img {
   width: 100%;

@@ -74,6 +74,14 @@
      }
 
 }
+.search-bar-item-for-other-pages{
+  //  font-size:3em ; 
+    margin-inline: auto;
+    background-color: #fff;
+    padding: 0.5em;
+    width: 100%;
+    text-align: center;
+}
 .search-bar-item{ 
     position: relative;
     width:30%;
@@ -137,6 +145,7 @@
                 font-size: var(--search-list-rel-fz);
                 margin-top: 4.8em;
                 position: relative;
+                min-height: 130px;
                 .search-post-left { 
                     //width: 37.6em;
                 //  height: 24.4em;
@@ -201,7 +210,17 @@
                         font-weight: 500;
                         position: absolute;
                         bottom: 0px;
-                        .search-post-author-name { 
+                        display: flex;
+                        gap: 1.2em;
+                        align-items: center;
+                        .search-post-author-propic { 
+                            img{
+                                width: 44px;
+                            height: 44px;
+                            border-radius: 100%; 
+                            object-fit: cover;
+                            }
+                            
 
                         }
 
@@ -213,7 +232,7 @@
                 .post-link-a{
                     display: block;
                     position: absolute;
-                    top: 0;
+                    top: 0;  
                     left: 0;
                     bottom: 0;
                     right: 0;

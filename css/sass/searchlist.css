@@ -54,6 +54,14 @@
   }
 }
 
+.search-bar-item-for-other-pages {
+  margin-inline: auto;
+  background-color: #fff;
+  padding: 0.5em;
+  width: 100%;
+  text-align: center;
+}
+
 .search-bar-item {
   position: relative;
   width: 30%;
@@ -113,6 +121,7 @@
   font-size: var(--search-list-rel-fz);
   margin-top: 4.8em;
   position: relative;
+  min-height: 130px;
 }
 .search-list-posts .search-post-wrapper .search-post-left {
   aspect-ratio: 376/244;
@@ -158,6 +167,15 @@
   font-weight: 500;
   position: absolute;
   bottom: 0px;
+  display: flex;
+  gap: 1.2em;
+  align-items: center;
+}
+.search-list-posts .search-post-wrapper .search-post-right .search-post-author .search-post-author-propic img {
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  object-fit: cover;
 }
 .search-list-posts .search-post-wrapper .post-link-a {
   display: block;

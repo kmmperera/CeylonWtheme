@@ -42,19 +42,19 @@
                     <ul id="nav-ul">
 
                         <li class="nav-li">
-                            <a href="#" class="nav-a">Home</a>
+                            <a href="<?php echo home_url();?>" class="nav-a">Home</a>
                         </li>
                         <li class="nav-li">
-                            <a href="#our-team" class="nav-a">About</a>
+                            <a href="<?php echo home_url();?>#our-team" class="nav-a">About</a>
                         </li>
                         <li class="nav-li">
-                            <a href="#" class="nav-a">Contact</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('members')->ID); ?>" class="nav-a">Contact</a>
                         </li>
                         <li class="nav-li">
-                            <a href="#" class="nav-a">Blog</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('blog')->ID); ?>" class="nav-a">Blog</a>
                         </li>
                         <li class="nav-li">
-                            <a href="#" class="nav-a impressa">Impressa</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('impressa')->ID); ?>" class="nav-a impressa">Impressa</a>
                         </li>
 
                     </ul>

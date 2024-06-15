@@ -1,4 +1,4 @@
-<?php  /* Template Name: Members  Template */  ?>
+<?php  /* Template Name: Member Manager  Template */  ?>
 
 <?php get_header(); ?>
 
@@ -7,7 +7,7 @@
            
            <div id="member-middle">
                <div id="member-page-pic">
-                   <img src="<?php echo get_template_directory_uri().'/images/face4.png'?>"  alt="">
+                   <img src="<?php echo get_template_directory_uri().'/images/face5.png'?>"  alt="">
                </div>
                
            </div>
@@ -22,7 +22,7 @@
        </div>
        <div class="member-page-service">
            <div class="member-page-service-title">
-               All document work
+              Contact Us
            </div>
            <div id="member-page-service-description">
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, dui id volutpat vestibulum, orci ipsum pharetra
@@ -43,7 +43,7 @@
        </div>
        <div class="member-page-service">
            <div class="member-page-service-title">
-               Submit 730
+               Send your CV
            </div>
            <div id="member-page-service-description">
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, dui id volutpat vestibulum, orci ipsum pharetra

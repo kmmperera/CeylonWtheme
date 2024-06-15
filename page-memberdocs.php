@@ -1,4 +1,4 @@
-<?php  /* Template Name: Members  Template */  ?>
+<?php  /* Template Name: Member Docs  Template */  ?>
 
 <?php get_header(); ?>
 
@@ -16,7 +16,7 @@
                    Name Surname
                </div>
                <div id="member-page-role">
-                   Our team leader
+                  Document Work
                </div>
            </div>
        </div>

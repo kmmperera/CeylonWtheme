@@ -62,47 +62,49 @@
                             Name Surname
                         </div>
                         <div class="member-role">
-                            Our manager
+                           Document Work
                         </div>
                         <div class="member-jobs">
-                            <div class="member-job">
-                                <div class="job-name">
+                           
+                            <a href="<?php echo get_permalink(get_page_by_path('document-work')->ID); ?>" class="member-job">
+                                <span class="job-name">
                                     All Document work
-                                </div>
-                                <div class="job-link">
+                                </span>
+                                <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
-                                </div>
+                                </span>
 
 
-                            </div>
-                            <div class="member-job">
-                                <div class="job-name">
+                            </a>
+                            <a href="<?php echo get_permalink(get_page_by_path('document-work')->ID); ?>" class="member-job">
+                                <span class="job-name">
                                     All Document work
-                                </div>
-                                <div class="job-link">
+                                </span>
+                                <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
-                                </div>
+                                </span>
 
 
-                            </div>
-                            <div class="member-job">
-                                <div class="job-name">
+                            </a>
+                            <a href="<?php echo get_permalink(get_page_by_path('document-work')->ID); ?>" class="member-job">
+                                <span class="job-name">
                                     All Document work
-                                </div>
-                                <div class="job-link">
+                                </span>
+                                <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
-                                </div>
+                                </span>
 
 
-                            </div>
+                            </a>
+                           
                         </div>
                         <div class="see-more-btn">
-                            <a href="<?php echo home_url();?>/?page_id=276">See more</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('document-work')->ID); ?>">See more</a>
                         </div>
                     </div>
                     <div class="team-member">
                         <div class="team-member-pic">
-                            <img src="<?php echo get_template_directory_uri().'/images/face4.png'?>" alt="">
+                            <img src="<?php echo get_template_directory_uri().'/images/face5.png'?>" alt="">
                         </div>
                         <div class="member-name">
                             Name Surname
@@ -111,131 +113,137 @@
                             Our manager
                         </div>
                         <div class="member-jobs">
-                            <div class="member-job">
-                                <div class="job-name">
+                           
+                            <a href="<?php echo get_permalink(get_page_by_path('our-manager')->ID); ?>" class="member-job">
+                                <span class="job-name">
                                     All Document work
-                                </div>
-                                <div class="job-link">
+                                </span>
+                                <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
-                                </div>
+                                </span>
 
 
-                            </div>
-                            <div class="member-job">
-                                <div class="job-name">
+                            </a>
+                            <a href="<?php echo get_permalink(get_page_by_path('our-manager')->ID); ?>" class="member-job">
+                                <span class="job-name">
                                     All Document work
-                                </div>
-                                <div class="job-link">
+                                </span>
+                                <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
-                                </div>
+                                </span>
 
 
-                            </div>
-                            <div class="member-job">
-                                <div class="job-name">
+                            </a>
+                            <a href="<?php echo get_permalink(get_page_by_path('our-manager')->ID); ?>" class="member-job">
+                                <span class="job-name">
                                     All Document work
-                                </div>
-                                <div class="job-link">
+                                </span>
+                                <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
-                                </div>
+                                </span>
 
 
-                            </div>
+                            </a>
+                           
                         </div>
                         <div class="see-more-btn">
-                            <a href="#">See more</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('our-manager')->ID); ?>">See more</a>
                         </div>
                     </div>
                     <div class="team-member">
                         <div class="team-member-pic">
-                            <img src="<?php echo get_template_directory_uri().'/images/face4.png'?>" alt="">
+                            <img src="<?php echo get_template_directory_uri().'/images/face1.jpg'?>" alt="">
                         </div>
                         <div class="member-name">
                             Name Surname
                         </div>
                         <div class="member-role">
-                            Our manager
+                            Bank Support
                         </div>
                         <div class="member-jobs">
-                            <div class="member-job">
-                                <div class="job-name">
+                           
+                            <a href="<?php echo get_permalink(get_page_by_path('loan-provider')->ID); ?>" class="member-job">
+                                <span class="job-name">
                                     All Document work
-                                </div>
-                                <div class="job-link">
+                                </span>
+                                <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
-                                </div>
+                                </span>
 
 
-                            </div>
-                            <div class="member-job">
-                                <div class="job-name">
+                            </a>
+                            <a href="<?php echo get_permalink(get_page_by_path('loan-provider')->ID); ?>" class="member-job">
+                                <span class="job-name">
                                     All Document work
-                                </div>
-                                <div class="job-link">
+                                </span>
+                                <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
-                                </div>
+                                </span>
 
 
-                            </div>
-                            <div class="member-job">
-                                <div class="job-name">
+                            </a>
+                            <a href="<?php echo get_permalink(get_page_by_path('loan-provider')->ID); ?>" class="member-job">
+                                <span class="job-name">
                                     All Document work
-                                </div>
-                                <div class="job-link">
+                                </span>
+                                <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
-                                </div>
+                                </span>
 
 
-                            </div>
+                            </a>
+                           
                         </div>
                         <div class="see-more-btn">
-                            <a href="#">See more</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('loan-provider')->ID); ?>">See more</a>
                         </div>
                     </div>
                     <div class="team-member">
                         <div class="team-member-pic">
-                            <img src="<?php echo get_template_directory_uri().'/images/face4.png'?>" alt="">
+                            <img src="<?php echo get_template_directory_uri().'/images/face3.jpg'?>" alt="">
                         </div>
                         <div class="member-name">
                             Name Surname
                         </div>
                         <div class="member-role">
-                            Our manager
+                            Administrator Office
                         </div>
                         <div class="member-jobs">
-                            <div class="member-job">
-                                <div class="job-name">
+                           
+                            <a href="<?php echo get_permalink(get_page_by_path('office-work')->ID); ?>" class="member-job">
+                                <span class="job-name">
                                     All Document work
-                                </div>
-                                <div class="job-link">
+                                </span>
+                                <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
-                                </div>
+                                </span>
 
 
-                            </div>
-                            <div class="member-job">
-                                <div class="job-name">
+                            </a>
+                            <a href="<?php echo get_permalink(get_page_by_path('office-work')->ID); ?>" class="member-job">
+                                <span class="job-name">
                                     All Document work
-                                </div>
-                                <div class="job-link">
+                                </span>
+                                <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
-                                </div>
+                                </span>
 
 
-                            </div>
-                            <div class="member-job">
-                                <div class="job-name">
+                            </a>
+                            <a href="<?php echo get_permalink(get_page_by_path('office-work')->ID); ?>" class="member-job">
+                                <span class="job-name">
                                     All Document work
-                                </div>
-                                <div class="job-link">
+                                </span>
+                                <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
-                                </div>
+                                </span>
 
 
-                            </div>
+                            </a>
+                           
                         </div>
                         <div class="see-more-btn">
-                            <a href="#">See more</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('office-work')->ID); ?>">See more</a>
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,5 @@
 
 
-<?php get_header(); ?>
 
 <div class="post-wrapper h-padding">
 
@@ -51,34 +50,16 @@
                                             <div class="post-title">
                                                 <?php the_title(); ?>
                                             </div>
-                                            <div class="single-post-author">
-                                                 <span class="search-post-author-propic">
-
-                                                    <?php  
-                                                                    if( get_avatar(get_the_author_meta('ID')) !== "" ){
-
-                                                                        $avatar=get_avatar(get_the_author_meta('ID'));
-                                                                        echo $avatar;
-                                                                        ?>
-                                                                    
-                                                                    <?php  }
-                                                                    else{
-                                                                        
-                                                                        $dummyimg=get_template_directory_uri().'/images/nopic.jpg';
-                                                                        ?>
-                                                                        <img src="<?php echo $dummyimg ?>" > 
-                                                                        
-                                                                    <?php  }
-                                                            
-                                                    ?>
-
-                                                </span>
-
-                                                <span class="search-post-date">
-
-                                                   <b class="underline-span"> <?php the_author_posts_link(); ?> </b>  <span class="grey-span">on <?php the_time( 'F jS, Y' ); ?> </span>
-                                                </span>
-
+                                            <div class="author-details">
+                                                <div class="author-pic">
+                                                    <img src="<?php echo get_template_directory_uri().'/images/face5.png'?>" alt="">
+                                                </div>
+                                                <div class="author-name">
+                                                    Author Name
+                                                </div>
+                                                <div class="written-date">
+                                                    Jan 20,2024
+                                                </div>
                                             </div>
                                             <div class="post-para">
                                                 <?php the_content(); ?>
@@ -106,4 +87,4 @@
 </div>
 
         
-<?php get_footer(); ?>
+

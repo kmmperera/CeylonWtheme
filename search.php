@@ -45,7 +45,26 @@
                                 <?php the_excerpt(); ?>   
                         </div>
                         <div class="search-post-author">
-                            <span class="search-post-author-name">
+                        <span class="search-post-author-propic">
+
+                                    <?php  
+                                                    if( get_avatar(get_the_author_meta('ID')) !== "" ){
+
+                                                        $avatar=get_avatar(get_the_author_meta('ID'));
+                                                        echo $avatar;
+                                                        ?>
+                                                    
+                                                    <?php  }
+                                                    else{
+                                                        
+                                                        $dummyimg=get_template_directory_uri().'/images/nopic.jpg';
+                                                        ?>
+                                                        <img src="<?php echo $dummyimg ?>" > 
+                                                        
+                                                    <?php  }
+                                            
+                                    ?>
+
                             </span>
                             <span class="search-post-date">
                             

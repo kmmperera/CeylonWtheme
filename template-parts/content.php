@@ -1,20 +1,26 @@
-<?php get_header();?>
+
 
     <div class="search-list-results-wrapper h-padding">
     
     
+
         <div class="search-list-title ">
-        <div class="search-bar-item-for-other-pages ">
-                Posts for Category : <?php single_cat_title(); ?>
+            <div class="search-bar-item-for-other-pages">
+            Results for:<?php wp_title(); ?>
+            </div>
+               
         </div>
-        </div>
+
         <div class="search-list-description ">
+
+        There are 
                 <?php  
                         global $wp_query; 
                         echo $wp_query->found_posts;
                 ?>
                 
-                results for “<?php single_cat_title(); ?>”
+            Results    
+       
         </div>
         <div class="search-list-posts ">
 
@@ -26,12 +32,12 @@
                         <?php if ( has_post_thumbnail() ) :
                                             $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' ); ?>
                                             <img   class="" src="<?php echo $featured_image[0]; ?>" alt="" />
-                        <?php else: ?>
 
-                                <?php  $featured_image=  get_template_directory_uri().'/images/logo.jpg'; ?>
-                                <img   class="" src="<?php echo $featured_image; ?>" alt="" />
+                         <?php else: ?>
 
-                       <?php  endif; ?>
+                                        <?php  $featured_image=  get_template_directory_uri().'/images/logo.jpg'; ?>
+                                        <img   class="" src="<?php echo $featured_image; ?>" alt="" />                   
+                        <?php endif; ?>
                     </div>
                     <div class="search-post-right">
                         <div class="search-post-title">
@@ -41,9 +47,9 @@
                                 <?php the_excerpt(); ?>   
                         </div>
                         <div class="search-post-author">
-                             <span class="search-post-author-propic">
+                            <span class="search-post-author-propic">
 
-                                    <?php  
+                                  <?php  
                                                     if( get_avatar(get_the_author_meta('ID')) !== "" ){
 
                                                         $avatar=get_avatar(get_the_author_meta('ID'));
@@ -59,9 +65,9 @@
                                                         
                                                     <?php  }
                                             
-                                    ?>
+                                 ?>
 
-                                </span>
+                            </span>
                             <span class="search-post-date">
                             
                             <?php the_author_posts_link(); ?> on  <?php the_time( 'F jS, Y' ); ?> 
@@ -78,11 +84,11 @@
             </div>
 
             <?php endwhile; else: endif;?>
-            <?php wp_reset_postdata(); ?>
+
 
 
             <div class="search-post-pagination">
-                
+               
                     <?php the_posts_pagination(); ?>
             </div>
         </div>

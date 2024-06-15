@@ -1,4 +1,4 @@
-<?php  /* Template Name: Members  Template */  ?>
+<?php  /* Template Name: Member Other  Template */  ?>
 
 <?php get_header(); ?>
 
@@ -7,7 +7,7 @@
            
            <div id="member-middle">
                <div id="member-page-pic">
-                   <img src="<?php echo get_template_directory_uri().'/images/face4.png'?>"  alt="">
+                   <img src="<?php echo get_template_directory_uri().'/images/face3.jpg'?>"  alt="">
                </div>
                
            </div>
@@ -16,13 +16,14 @@
                    Name Surname
                </div>
                <div id="member-page-role">
-                   Our team leader
+                    Administrator at Office
+
                </div>
            </div>
        </div>
        <div class="member-page-service">
            <div class="member-page-service-title">
-               All document work
+               Buy Air Tickets
            </div>
            <div id="member-page-service-description">
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, dui id volutpat vestibulum, orci ipsum pharetra
@@ -43,7 +44,7 @@
        </div>
        <div class="member-page-service">
            <div class="member-page-service-title">
-               Submit 730
+               Register for Language exams
            </div>
            <div id="member-page-service-description">
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, dui id volutpat vestibulum, orci ipsum pharetra
