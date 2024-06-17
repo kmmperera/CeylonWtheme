@@ -86,11 +86,37 @@
                                                 ?>
                                         </div>
 
+                                        <!-- for image attachments  -->
+
+                                                 <?php  
+                                                        $args = array(
+                                                            'post_type' => 'attachment',
+                                                            'post_mime_type' => 'image',
+                                                            'numberposts' => -1,
+                                                            'orderby' => 'menu_order',
+                                                            'order' => 'ASC',
+                                                            'post_parent' => $post->ID
+                                                        );
+                                                        $images = get_posts($args);
+                                                    
+                                                        if($images){ 
+                                                            foreach($images as $img){
+                                                                echo wp_get_attachment_image($img->ID, $size='attached-image');
+                                                            }
+                                                      
+                                                        }
+
+                                                ?>
+
+                                        <!-- end of image attachments  -->
+
                                         <?php 
                                                 endwhile;
                                                 
                                                 else : endif; 
                                         ?>
+
+                                        <?php wp_reset_postdata(); ?>
                                  </div>
                 
         </div>

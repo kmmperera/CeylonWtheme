@@ -44,6 +44,8 @@ function overidewoocomstyles(){
 
 	wp_enqueue_style( 'frontpagecss', get_stylesheet_directory_uri() . '/css/sass/newceylon.css', '',  $num3, 'all' );
 
+	wp_enqueue_style( 'paymentformcss', get_stylesheet_directory_uri() . '/css/sass/paymentform.css', '',  $num3, 'all' );
+
 
 }
 add_action('wp_enqueue_scripts','ceyms_enqueue_scripts',2000);
@@ -170,9 +172,18 @@ if (
 	$attachment_id = media_handle_upload( 'my_image_upload', $_POST['post_id'] );
 
 	if ( is_wp_error( $attachment_id ) ) {
-		echo 'Error loading media file';
+		//$_POST = array();
+		//echo "<script>document.querySelector('#featured_upload').reset();console.log('image attach failed !!!');</script>";
+		wp_redirect(add_query_arg('message','failed', wp_get_referer()));
+		exit;
+
 	} else {
-		echo 'The media file was successfully uploaded!';
+		//echo 'The media file was successfully uploaded!';
+		//$_POST = array();
+	//	echo "<script>document.querySelector('#featured_upload')[0].reset();console.log('image attached !!!');</script>";
+	wp_redirect(add_query_arg('message', 'succeded', wp_get_referer()));
+	exit;
+
 	}
 
 } 
