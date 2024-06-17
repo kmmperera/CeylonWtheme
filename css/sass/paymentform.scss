@@ -1,6 +1,95 @@
 
 .mainbody{
 
-    margin-top: 10em;
+    //font-size: var(--home-div-fz);
     margin-bottom: 10em;
+    margin-top: 4em;
+    max-width: 100%;
 }
+table, th, td {
+  //  border:1px solid black;
+
+  }
+
+.payslip-page-title{
+    background-color:white;
+    margin-inline:auto;
+    text-align: center;
+    padding: 12px;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+
+    @media(max-width:576px){
+                    
+        font-size: 1em;
+          }
+    
+}
+#featured_upload { 
+
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 2em;
+    @media(max-width:576px){
+                    
+      font-size: 0.8em;
+        }
+		label { 
+
+		}
+
+		#post_id { 
+
+		}
+
+		br { 
+
+        }
+        
+        
+        .input-table{
+            td{
+                padding: 8px;
+
+                overflow: hidden;
+                display: inline-block;
+                white-space: nowrap;
+
+                @media(max-width:576px){
+                    
+                max-width: 250px;
+                padding:4px;
+                padding-top: 12px;
+                }
+            }
+
+            input{
+                padding: 12px;
+                font-size: 1em;
+                border-radius: 4px;
+            }
+
+        }
+	}
+
+	#submit_my_image_upload { 
+
+        background-color: #04AA6D;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 1em;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin-left: 12px;
+        margin-top: 12px;
+        margin-bottom: 24px;
+
+
+	}
