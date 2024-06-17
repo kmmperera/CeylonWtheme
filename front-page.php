@@ -361,8 +361,60 @@
                 <div id="appointment-title">
                     BOOK AN APPOINTMENT
                 </div>
-                <div id="appointment-empty">
+                <div id="appointment-contents-wrapper">
+                    <div class="appointment-left">
+                        <div class="appointment-left-heading">
+                            All You need to Do !!!
+                        </div>
+                        <div class="appointment-left-descriptin">
+                        Book an appointment to meet us in person .Chose the location ,date and time first.Also do not forget to make sure give us the reason why you want an appointment with us.Once you fill and submit the form ,you will receive an email containing all the details .
+                        </div>
 
+                        <div class="appointment-left-places-wrapper">
+                            <div class="appointment-services-places">
+                                Monza
+                            </div>
+                            <div class="appointment-services-wrapper">
+
+                                <div class="appointment-left-services">
+                                     We do document works 
+                                </div>
+                                <div class="appointment-left-services">
+                                     Booking Air  tickets 
+                                </div>
+                                <div class="appointment-left-services">
+                                     Bank Support
+                                </div>
+
+                            </div>
+
+                            
+                        </div>
+
+                         <div class="appointment-left-places-wrapper">
+                         <div class="appointment-services-places">
+                                Milano
+                            </div>
+                            <div class="appointment-services-wrapper">
+
+                                <div class="appointment-left-services">
+                                        Meet our staff of impressa
+                                </div>
+                                <div class="appointment-left-services">
+                                         We do Home  visits  
+                                </div>
+                                <div class="appointment-left-services">
+                                         Cleaning Apartments 
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="appointment-right">
+
+                        <?php echo do_shortcode('[ea_standard]');?>
+                    </div>
                 </div>
             </div>
 

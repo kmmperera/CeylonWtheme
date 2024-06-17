@@ -543,18 +543,109 @@
   font-size: var(--home-div-fz);
   margin-top: 43em;
 }
-#appointments-area #appointment-title {
+
+#appointment-title {
   font-size: 3.6em;
   font-weight: var(--hero-section-head-fw);
   line-height: var(--hero-section-head-lh);
   letter-spacing: 0.2777777778em;
   text-align: center;
 }
-#appointments-area #appointment-empty {
-  width: 90%;
-  height: 90px;
-  margin: 12em auto;
-  background-color: rgb(165, 163, 163);
+
+#appointment-contents-wrapper {
+  display: flex;
+  gap: 48px;
+  margin-top: 10em;
+  margin-bottom: 10em;
+  justify-content: space-between;
+}
+@media (max-width: 992px) {
+  #appointment-contents-wrapper {
+    flex-direction: column;
+  }
+}
+
+.appointment-left {
+  flex: 1;
+}
+.appointment-left .appointment-left-heading {
+  font-size: 3em;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.appointment-left .appointment-left-descriptin {
+  margin-top: 4.8em;
+  font-size: 2em;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.appointment-left .appointment-left-places-wrapper {
+  margin-top: 3em;
+}
+.appointment-left .appointment-left-places-wrapper .appointment-services-places {
+  font-size: 2.4em;
+}
+.appointment-left .appointment-left-places-wrapper .appointment-services-wrapper {
+  padding: 2em;
+}
+.appointment-left .appointment-left-places-wrapper .appointment-services-wrapper .appointment-left-services {
+  font-size: 1.8em;
+  margin-top: 12px;
+}
+
+.appointment-right {
+  flex: 1;
+  font-size: initial;
+  letter-spacing: 1.5px;
+  margin-inline: auto;
+}
+.appointment-right .ea-standard {
+  max-width: 350px;
+  font-size: 1em;
+}
+.appointment-right .ea-standard .step select {
+  height: 36px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.appointment-right .ea-standard .step label {
+  letter-spacing: 1.5px;
+}
+.appointment-right .ea-standard .step textarea {
+  width: initial;
+  margin-left: 24px;
+}
+.appointment-right .step.final p {
+  margin-top: 24px;
+}
+.appointment-right .ea-standard .step input {
+  border-radius: 4px;
+  height: 36px;
+  margin-left: 12px;
+}
+.appointment-right .ea-btn.ea-submit {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.appointment-right .ea-btn.ea-cancel {
+  background-color: rgb(170, 4, 4);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 48px;
 }
 
 /*# sourceMappingURL=newceylon.css.map */

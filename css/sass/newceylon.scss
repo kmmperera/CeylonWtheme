@@ -695,6 +695,13 @@
 #appointments-area { 
 	font-size: var(--home-div-fz);
 	margin-top: 43em;
+	
+}
+
+
+
+
+
 	#appointment-title { 
 		font-size:3.6em;
 		font-weight: var(--hero-section-head-fw);
@@ -702,10 +709,153 @@
 		letter-spacing:  0.27777777777em;
 		text-align: center;
 	}
-	#appointment-empty{
-		width: 90%;
-		height: 90px;
-		margin: 12em auto;
-		background-color: rgb(165, 163, 163);
+
+	
+#appointment-contents-wrapper{
+
+	display: flex;
+	gap: 48px;
+	margin-top: 10em;
+	margin-bottom: 10em;
+	justify-content: space-between;
+
+	@media(max-width:992px){
+		flex-direction: column;
+		
 	}
 }
+		.appointment-left { 
+			flex: 1;
+			.appointment-left-heading { 
+				font-size: 3em;
+				letter-spacing: 2px;
+				text-align: center;
+
+
+			}
+
+			.appointment-left-descriptin {
+				margin-top: 4.8em; 
+				font-size: 2em;
+				line-height: 1.5;
+				font-weight: 300;
+			}
+
+			.appointment-left-places-wrapper { 
+
+				margin-top: 3em;
+
+				.appointment-services-places { 
+					font-size: 2.4em;
+				}
+
+				.appointment-services-wrapper { 
+
+					padding: 2em;
+					.appointment-left-services { 
+
+						font-size: 1.8em;
+						margin-top: 12px;
+					}
+				}
+			}
+
+			
+		}
+
+		.appointment-right { 
+			flex: 1;
+			font-size: initial;
+			letter-spacing: 1.5px;
+			margin-inline:auto;
+
+			.ea-standard{
+				max-width: 350px;
+				font-size: 1em;
+			}
+			.ea-standard .step select {
+				
+				height: 36px;
+				border-radius: 4px;
+				font-size: 14px;
+			}
+			.ea-standard .step label {
+				
+				letter-spacing: 1.5px;
+			}
+			.ea-standard .step textarea{
+
+				width:initial;
+				margin-left: 24px;
+			}
+
+			.ui-widget-header {
+				// border: 1px solid #17BC59;
+				// background: initial;
+				// background-color: #17BC59;
+				// color:white;
+				// font-weight: bold;
+			}
+			.ui-widget-content .ui-icon{
+				//background-image: none;
+			}
+			.ui-datepicker .ui-datepicker-next:hover ,.ui-datepicker .ui-datepicker-next:hover {
+				// background: initial;
+				// opacity: 0.7;
+				// color: white;
+			}
+			.ui-datepicker .ui-datepicker-next:hover  ,.ui-datepicker .ui-datepicker-next:hover {
+				// background: initial;
+				// opacity: 0.7;
+				// color: white;
+			}
+			.ui-datepicker .ui-datepicker-next.ui-state-hover span {
+				// background: initial;
+				// opacity: 0.7;
+				// color: white;
+			}
+
+			.step.final p{
+				margin-top: 24px;
+			}
+
+			.ea-standard .step input {
+				border-radius: 4px;
+				
+				height: 36px;
+				
+				margin-left: 12px;
+			}
+
+			.ea-btn.ea-submit{
+				background-color: #04AA6D;
+				border: none;
+				color: white;
+				padding: 8px 16px;
+				text-align: center;
+				text-decoration: none;
+				
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+
+			}
+			.ea-btn.ea-cancel{
+				background-color: rgb(170, 4, 4);
+				border: none;
+				color: white;
+				padding: 8px 16px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+
+				margin-left: 48px;
+
+			}
+			
+
+		}
+	
