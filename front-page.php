@@ -14,7 +14,7 @@
                     </div>
                     <div id="frnt-hero-btn-area">
                         <div id="frnt-hero-primary-btn">
-                         <button> Book now </button>  
+                         <button> <a href="#appointments-area"> Book now </a> </button>  
                         </div>
                         <div id="frnt-hero-secondary-btn">
                           <button> Call us </button> 
@@ -283,7 +283,7 @@
                 </div>
 
                 <div id="find-more-btn">
-                    <a href="#">
+                    <a href="<?php echo home_url();?>/?cat=3">
                          Find out more 
                          <i class="bi bi-chevron-right"></i>
                     </a>
@@ -313,7 +313,7 @@
                                 Praesent condimentum convallis nibh. Sed sollits naw.Praesent condimentum convallis nibh. Sed sollits naw...
                             </div>
                             <div class="blog-read-more-btn">
-                                <a href="#">Read more</a>
+                                <a href="<?php echo home_url();?>/?p=56">Read more</a>
                             </div>
                         </div>
 
@@ -331,7 +331,7 @@
                             Praesent condimentum convallis nibh. Sed sollits naw.Praesent condimentum convallis nibh. Sed sollits naw...
                         </div>
                         <div class="blog-read-more-btn">
-                            <a href="#">Read more</a>
+                            <a href="<?php echo home_url();?>/?p=59">Read more</a>
                         </div>
                      </div>
 
@@ -349,7 +349,7 @@
                             Praesent condimentum convallis nibh. Sed sollits naw.Praesent condimentum convallis nibh. Sed sollits naw...
                         </div>
                         <div class="blog-read-more-btn">
-                            <a href="#">Read more</a>
+                            <a href="<?php echo home_url();?>/?p=61">Read more</a>
                         </div>
                         </div>
 

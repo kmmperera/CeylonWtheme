@@ -48,7 +48,7 @@
                             <a href="<?php echo home_url();?>#our-team" class="nav-a">About</a>
                         </li>
                         <li class="nav-li">
-                            <a href="<?php echo get_permalink(get_page_by_path('members')->ID); ?>" class="nav-a">Contact</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('our-manager')->ID); ?>" class="nav-a">Contact</a>
                         </li>
                         <li class="nav-li">
                             <a href="<?php echo get_permalink(get_page_by_path('blog')->ID); ?>" class="nav-a">Blog</a>
