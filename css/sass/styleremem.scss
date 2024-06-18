@@ -251,7 +251,7 @@
 			line-height: 1.3;
 			letter-spacing: 0.1em;
 			font-weight: 400;
-
+			cursor: pointer;
 			padding:0.4em 0.8em;
 			background-color: #17BC59;
 			border: none;
@@ -260,6 +260,45 @@
 	}
 
 
+//Modal
+
+#member-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.member-modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.member-modal-close:hover,
+.member-modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 
 	 
@@ -267,7 +306,7 @@
 
 
 
-/* ------------------------ Media querries--------------------------   */
+
 
 
 

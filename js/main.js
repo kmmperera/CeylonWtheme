@@ -37,7 +37,73 @@
 
  });
 
+// //modal
 
+
+//   // Get the modal
+let membermodal = document.getElementById("member-modal");
+
+let closespan = document.querySelector(".member-modal-close");
+
+closespan.onclick=function() {
+    if(membermodal){
+        membermodal.style.display = "none";
+    }
+   
+  };
+
+    window.addEventListener("click", function(event) {
+      if (event.target == membermodal) {
+        membermodal.style.display = "none";
+      }
+  });
+
+
+//   // Get the button that opens the modal
+//let memberbtn = document.getElementById("openModalBtn");
+  
+//   // Get the <span> element that closes the modal
+//   let span = document.querySelector(".member-modal-close");
+  
+//   // Get the "Back" and "Next" buttons
+//   let backBtn = document.getElementById("backBtn");
+//   let nextBtn = document.getElementById("nextBtn");
+  
+   // When the user clicks the button, open the modal
+//    memberbtn.onclick = function() {
+//     membermodal.style.display = "block";
+//   }
+  
+//   // When the user clicks on <span> (x), close the modal
+//   span.addEventListener("click", function() {
+//       modal.style.display = "none";
+//   });
+  
+//   // When the user clicks anywhere outside of the modal, close it
+//   window.addEventListener("click", function(event) {
+//       if (event.target == modal) {
+//           modal.style.display = "none";
+//       }
+//   });
+  
+//   // Add click events for "Back" and "Next" buttons
+//   backBtn.onclick = function() {
+//       alert("Back button clicked!");
+//   }
+  
+//   nextBtn.onclick = function() {
+//       alert("Next button clicked!");
+//   }
+  
+
+
+
+
+
+
+
+
+// form submition member page 
 
  jQuery(document).ready(function($){
     console.log("jq works");
@@ -46,6 +112,8 @@
         console.log('Form Submitted');
   
         let formSelected = e.currentTarget.parentElement;
+        //let nextele=formSelected.next();
+       // let modaldiv=nextele.children()[0];
        // let product_id   = document.getElementById(formSelected.id + '-hidden').value;
   
        // let values = [];
@@ -70,11 +138,18 @@
                 type: 'post',
                 success: function(res){
                     console.log(res);
-                    $('.blog-description').html(res);
+                    document.getElementById("member-modal").style.display = "block";
+                    document.querySelector('.submit-results-member-jobs').innerHTML=res;
+                    formSelected.reset();
                    // window.location.reload();
                 },
                 error: function(err){
                     console.log(err);
+                    document.getElementById("member-modal").style.display = "block";
+                    //document.querySelectorAll(".modal-pay-btn").style.display = "none";
+
+                    document.querySelector('.submit-results-member-jobs').innerHTML=err;
+                    formSelected.reset();
                 },
             });
         
@@ -90,3 +165,6 @@
    
 
   });
+
+
+  

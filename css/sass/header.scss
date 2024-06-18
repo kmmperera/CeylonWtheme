@@ -336,3 +336,47 @@ a{
     }
    
 }
+
+// woocommerce styles
+
+.wp-block-woocommerce-checkout.alignwide.wc-block-checkout{
+
+	padding-inline: var(--padding-inline);
+
+}
+.wc-block-components-sidebar-layout.wc-block-cart.wp-block-woocommerce-filled-cart-block{
+
+    padding-inline: var(--padding-inline);
+
+}
+.page-margin-div h1{
+    padding-inline: var(--padding-inline);
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    letter-spacing: 1px;
+}
+
+
+//modal css
+
+.modal-content{
+    font-size: 0.5em;
+    a{
+        margin-left: 1em;
+        margin-top: 2em;
+        padding: 0.5em 1em;
+        background-color:#33B628;
+        color: white;
+        border-radius: 4px;
+        letter-spacing: 1px;
+       
+    }
+}
+.submit-results-member-jobs{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.member-modal-close{
+    color: red;
+}
