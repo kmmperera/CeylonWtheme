@@ -8,7 +8,7 @@ add_theme_support('post-thumbnails');
 
 function ceyms_enqueue_scripts() {	
 	
-	wp_enqueue_style( 'dummycss', get_stylesheet_directory_uri() . '/css/styles.css', '', '1.0.99', 'all' );
+	//wp_enqueue_style( 'dummycss', get_stylesheet_directory_uri() . '/css/styles.css', '', '1.0.99', 'all' );
 	//wp_enqueue_script( 'dummyjs', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ), '1.0.8', true );
 	wp_enqueue_style( 'footercss', get_stylesheet_directory_uri() . '/css/sass/footer.css', '', '1.0.99', 'all' );
 	wp_enqueue_style( 'impressacss', get_stylesheet_directory_uri() . '/css/sass/newimpressa.css', '', '1.0.99', 'all' );
@@ -32,7 +32,7 @@ function overidewoocomstyles(){
 	$num1=rand(1,999);
 	$num2=rand(1,999);
 	$num3=($num1+$num2)/2;
-	wp_enqueue_style("mywoostyles",get_stylesheet_directory_uri().'/css/mywoo.css',array('woocommerce-general','woocommerce-layout','woocommerce-smallscreen'),$num3,'all');
+	//wp_enqueue_style("mywoostyles",get_stylesheet_directory_uri().'/css/mywoo.css',array('woocommerce-general','woocommerce-layout','woocommerce-smallscreen'),$num3,'all');
 
 	wp_enqueue_style("poststyles",get_stylesheet_directory_uri().'/css/sass/poststyle.css','',$num3,'all');
 
@@ -47,6 +47,9 @@ function overidewoocomstyles(){
 	wp_enqueue_style( 'membercss', get_stylesheet_directory_uri() . '/css/sass/styleremem.css', '',  $num3, 'all' );
 
 	wp_enqueue_style( 'headercss', get_stylesheet_directory_uri() . '/css/sass/header.css', '', $num3, 'all' );
+
+	wp_enqueue_style( 'commoncss', get_stylesheet_directory_uri() . '/css/sass/common.css', '', $num3, 'all' );
+
 
 	wp_register_script('mainjs',get_template_directory_uri().'/js/main.js',array('jquery'),$num3,true);
 	wp_enqueue_script('mainjs');

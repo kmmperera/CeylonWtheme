@@ -19,16 +19,16 @@
                     </div>
                     <ul class="footer-links-ul">
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">About us</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">About us</a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Contact us</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Contact us</a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Our mission</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Our mission</a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Our mission</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Our mission</a>
                         </li>
 
                     </ul>
@@ -39,25 +39,25 @@
                     </div>
                     <ul class="footer-links-ul">
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Where we arek</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Where we arek</a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Our services</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Our services</a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Locations</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Locations</a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Pricing</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Pricing</a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Our services</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Our services</a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Locations</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Locations</a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Pricing</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Pricing</a>
                         </li>
 
                     </ul>
@@ -68,25 +68,25 @@
                     </div>
                     <ul class="footer-links-ul">
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Tutorials</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Tutorials</a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Vlog posts</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Vlog posts</a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Terms & Conditions</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Terms & Conditions</a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Join us</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Join us</a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Our services</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Our services</a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Locations</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Locations</a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li-a">Categories</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('unpublished')->ID); ?>" class="footer-li-a">Categories</a>
                         </li>
 
                     </ul>
