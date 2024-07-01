@@ -13,11 +13,11 @@
                         Get done all kind of document work.We do 730 ,Air ticeting and provide many more services.
                     </div>
                     <div id="frnt-hero-btn-area">
-                        <div id="frnt-hero-primary-btn">
-                         <button> <a href="#appointments-area"> Book now </a> </button>  
+                        <div id="new-frnt-hero-primary-btn">
+                         <button id="call-us-btn"> Call us</button>  
                         </div>
-                        <div id="frnt-hero-secondary-btn">
-                          <button> Call us </button> 
+                        <div id="new-frnt-hero-secondary-btn">
+                          <button>  <a href="#appointments-area"> Book now </a>  </button> 
                         </div>
                     </div>
                 </div>
@@ -255,27 +255,34 @@
                 </div>
 
 
-                <div id="services-carrosel">
-                    <div class="services-slide">
-                        <img src="<?php echo get_template_directory_uri().'/images/hero-three.png'?>"  alt="">
-                    </div>
-                    <div class="services-slide">
-                        <img src="<?php echo get_template_directory_uri().'/images/hero-three.png'?>" alt="">
-                    </div>
-                    <div class="services-slide">
-                        <img src="<?php echo get_template_directory_uri().'/images/hero-three.png'?>" alt="">
-                    </div>
-                    <div class="services-slide">
-                        <img src="<?php echo get_template_directory_uri().'/images/hero-three.png'?>" alt="">
-                    </div>
-                    <div id="prev-btn">
-                        <i class="bi bi-chevron-left"></i>
-                      
-                    </div>
-                    <div id="next-btn">
-                        <i class="bi bi-chevron-right"></i>
-                      
-                    </div>
+                <div id="new-services-carrosel">
+                    <div class="swiper post-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide post-swiper-slide  ">
+                                <img src="<?php echo get_template_directory_uri().'/images/slider-1.png'?>"  alt="">
+                            </div>
+                            <div class="swiper-slide post-swiper-slide ">
+                                <img src="<?php echo get_template_directory_uri().'/images/slider-2.png'?>" alt="">
+                            </div>
+                            <div class="swiper-slide post-swiper-slide ">
+                                <img src="<?php echo get_template_directory_uri().'/images/slider-3.png'?>" alt="">
+                            </div>
+                            <div class="swiper-slide post-swiper-slide ">
+                                <img src="<?php echo get_template_directory_uri().'/images/slider-4.png'?>" alt="">
+                            </div>
+                            <div class="swiper-slide post-swiper-slide ">
+                                <img src="<?php echo get_template_directory_uri().'/images/slider-5.png'?>" alt="">
+                            </div>
+                            <div class="swiper-slide post-swiper-slide ">
+                                <img src="<?php echo get_template_directory_uri().'/images/slider-6.png'?>" alt="">
+                            </div>
+
+                            
+                        </div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>    
 
                 </div>
                 <div id="services-description">
@@ -367,48 +374,13 @@
                             All You need to Do !!!
                         </div>
                         <div class="appointment-left-descriptin">
-                        Book an appointment to meet us in person .Chose the location ,date and time first.Also do not forget to make sure give us the reason why you want an appointment with us.Once you fill and submit the form ,you will receive an email containing all the details .
+                        Book an appointment to meet us in Location and person .Chose the Person ,date and time first.Also do not forget to make sure give us the reason why you want an appointment with us.Once you fill and submit the form ,you will receive an email containing all the details .
                         </div>
 
-                        <div class="appointment-left-places-wrapper">
-                            <div class="appointment-services-places">
-                                Monza
-                            </div>
-                            <div class="appointment-services-wrapper">
-
-                                <div class="appointment-left-services">
-                                     We do document works 
-                                </div>
-                                <div class="appointment-left-services">
-                                     Booking Air  tickets 
-                                </div>
-                                <div class="appointment-left-services">
-                                     Bank Support
-                                </div>
-
-                            </div>
-
-                            
-                        </div>
-
-                         <div class="appointment-left-places-wrapper">
-                         <div class="appointment-services-places">
-                                Milano
-                            </div>
-                            <div class="appointment-services-wrapper">
-
-                                <div class="appointment-left-services">
-                                        Meet our staff of impressa
-                                </div>
-                                <div class="appointment-left-services">
-                                         We do Home  visits  
-                                </div>
-                                <div class="appointment-left-services">
-                                         Cleaning Apartments 
-                                </div>
-
-                            </div>
-                        </div>
+                       
+                        
+                           
+                      
 
                     </div>
                     <div class="appointment-right">

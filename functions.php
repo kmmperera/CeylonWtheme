@@ -50,9 +50,20 @@ function overidewoocomstyles(){
 
 	wp_enqueue_style( 'commoncss', get_stylesheet_directory_uri() . '/css/sass/common.css', '', $num3, 'all' );
 
+	wp_enqueue_style( 'swiperjscss', 'https://unpkg.com/swiper/swiper-bundle.min.css', '', $num3, 'all' );
+
 
 	wp_register_script('mainjs',get_template_directory_uri().'/js/main.js',array('jquery'),$num3,true);
 	wp_enqueue_script('mainjs');
+
+	wp_register_script('secondaryjs',get_template_directory_uri().'/js/secondaryjs.js','',$num3,true);
+	wp_enqueue_script('secondaryjs');
+
+	wp_register_script('swiperjscdn','https://unpkg.com/swiper/swiper-bundle.min.js','',$num3,true);
+	wp_enqueue_script('swiperjscdn');
+
+
+
 
 
 }
