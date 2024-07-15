@@ -42,6 +42,14 @@
 
                 <?php if (isset($_GET['message'])) echo '<p>' . esc_html($_GET['message']) . '</p>'; ?>
 
+           <div class="payslip-page-title">
+                Pay with your card
+            </div>
+
+            <div id="paynow-link">
+                     <span class="modal-pay-btn btn-opacity-change:hover"><?php get_add_to_cart_button_by_id(78); ?>    </span>
+
+            </div>
 
     </div>
 

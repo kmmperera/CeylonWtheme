@@ -60,6 +60,10 @@
                             <a href="<?php echo get_permalink(get_page_by_path('blog')->ID); ?>" class="nav-a">Blog</a>
                         </li>
                         <li class="nav-li">
+                            <a href="<?php echo get_permalink(get_page_by_path('upload-payments')->ID); ?>" class="nav-a">Pay</a>
+                        </li>
+
+                        <li class="nav-li">
                             <a href="<?php echo get_permalink(get_page_by_path('impressa')->ID); ?>" class="nav-a impressa">Impressa</a>
                         </li>
 
