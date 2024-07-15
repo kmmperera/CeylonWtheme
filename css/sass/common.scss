@@ -59,6 +59,7 @@ html {
 
     font-size: initial;
     margin-bottom: 2em;
+    margin-top: 2em;
 }
 .post-swiper-slide{
     font-size: initial;
@@ -181,5 +182,41 @@ html {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+// modal buttons 
+
+
+.modal-pay-btn{
+
+    a{
+        background-color: white !important;
+        color: #129346 !important;
+        border: 1px solid #075E2A !important;
+    }
+}
+
+.btn-opacity-change:hover{
+
+    opacity: 0.8;
+
+}
+
+// booking easey 
+
+#ui-datepicker-div{
+    display: none;
+}
+
+// translations
+
+#footer-bttm-right{
+
+    ul{
+        li{
+            list-style:none;
+        }
     }
 }

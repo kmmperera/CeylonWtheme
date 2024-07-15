@@ -6,9 +6,12 @@
                     <img src="<?php echo get_template_directory_uri().'/images/logo.jpg'?>" alt="">
                 </div>
                 <div id="footer-logo-description">
-                    Ceylon
-                    <br/> Multi-Service Agency
-                    <br/> Monza
+                         <p> Ceylon  </p> 
+                       
+                        <p>  Multi-Service Agency  </p>
+                       
+                        
+                        <p> Monza </p> 
 
                 </div>
             </div>
@@ -120,11 +123,18 @@
                     </div>
                 </div>
                 <div id="footer-bttm-right">
-                    English
-                    <i class="bi bi-chevron-down"></i>
-                    <div class="language-dropdown">
+                <?php wp_nav_menu(
+                    array(
+                        'theme_location' => 'lang-switer',
+                        'depth' => 2,
+                        'container' => 'div',
+                        'container_class' => 'header-wp-menu-ul-wrapper',
+                        'container_id' => 'ewt-wp-header-wrapper',
 
-                    </div>
+
+                          )
+                      );
+                 ?>
                 </div>
             </div>
         </div>

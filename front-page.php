@@ -1,5 +1,6 @@
 <?php get_header();?>
 
+    
             <div class="h-padding" id="frnt-hero-area">
                 <div id="frnt-hero-left">
                     <div id="frnt-hero-title">

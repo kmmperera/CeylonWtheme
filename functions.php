@@ -3,7 +3,16 @@
 <?php 
 add_theme_support('post-thumbnails');
 
+register_nav_menus(
 
+    array(
+
+        'lang-switer' => 'Language switer menu',
+
+
+    )
+
+);
 													//enqueue styles 
 
 function ceyms_enqueue_scripts() {	
@@ -185,10 +194,10 @@ function shortcodeforjobform(){
 
 	?>
 			<form id="member-page-service-input-form">
-			<input id="name" class="member-page-input-text" type="text" placeholder="Name">
-			<input id="surname" class="member-page-input-text" type="text" placeholder="Surname">
-			<input id="address" class="member-page-input-text" type="text" placeholder="Address">
-			<input id="telnum" class="member-page-input-text" type="text" placeholder="Tel Number">
+			<input id="name" class="member-page-input-text" type="text" placeholder="Name" required>
+			<input id="surname" class="member-page-input-text" type="text" placeholder="Surname" required>
+			<input id="address" class="member-page-input-text" type="email" placeholder="Email Address" required>
+			<input id="telnum" class="member-page-input-text" type="text" placeholder="Tel Number" required>
 
 			<input class="memeber-page-service-submit-btn" type="submit" value="Send now">
 			</form>
@@ -196,11 +205,11 @@ function shortcodeforjobform(){
 			
 				<div id="member-modal" class="modal">
 					<div class="modal-content">
-						<span class="member-modal-close">X</span>
+						<span class="member-modal-close"><i class="bi bi-x-square"></i></span>
 						<p class="submit-results-member-jobs"></p>
-						<a class="modal-pay-btn" href="<?php echo get_permalink(get_page_by_path('upload-payments')->ID); ?>" id="backBtn">Upload Pay Slip</a>
+						<a class="modal-pay-btn btn-opacity-change:hover" href="<?php echo get_permalink(get_page_by_path('upload-payments')->ID); ?>" id="backBtn">Upload Slip</a>
 						
-						<span class="modal-pay-btn"><?php get_add_to_cart_button_by_id(221); ?>    </span>
+						<span class="modal-pay-btn btn-opacity-change:hover"><?php get_add_to_cart_button_by_id(78); ?>    </span>
 					</div>
 				</div>
 			

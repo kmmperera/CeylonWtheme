@@ -22,9 +22,12 @@
                         <img src="<?php echo get_template_directory_uri().'/images/logo.jpg'?>" alt="">
                     </div>
                     <div id="logo-text">
-                        Ceylon
-                        <br/> Multi-Service Agency
-                        <br/> Monza
+                       <p> Ceylon  </p> 
+                        
+                        <p>  Multi-Service Agency  </p>
+                       
+                        
+                        <p> Monza </p> 
                     </div>
                 </div>
                 <div id="nav-menus">
@@ -33,9 +36,12 @@
                             <img src="<?php echo get_template_directory_uri().'/images/logo.jpg'?>" alt="">
                         </div>
                         <div id="m-logo-text">
-                            Ceylon
-                            <br/> Multi-Service Agency
-                            <br/> Monza
+                                <p> Ceylon  </p> 
+                                
+                                <p>  Multi-Service Agency  </p>
+                            
+                                
+                                <p> Monza </p> 
                         </div>
                     </div>
                     <i class="bi bi-x-square closebutton"></i>
