@@ -63,8 +63,8 @@ html {
 }
 .post-swiper-slide{
     font-size: initial;
-    width: 24em !important;
-    height: 14em !important;
+    //width: 24em !important;
+    height: 24em !important;
     object-fit: cover !important;
 
     img{
@@ -227,4 +227,32 @@ html {
 
     margin-top: 36px;
 
+}
+
+// woocommerce css
+
+
+.page-margin-div{
+
+    .woocommerce.columns-4{
+        padding-inline: var(--padding-inline); 
+    } 
+} 
+
+
+// euro rate
+
+.euro-rate-wrapper{
+text-align: right;
+margin-top: 24px;
+display: flex;
+align-items: center;
+justify-content: end;
+letter-spacing: 1px;
+    img{
+        height: 20px;
+        object-fit: cover;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
 }

@@ -322,6 +322,133 @@ if (
 
 add_action('init', 'imguplodfunc',10);
 
+						// side bars
+
+function my_sidebars()
+{
+    
+
+    register_sidebar(
+
+        array(
+
+            'name' => 'Euro rate widget Container',
+            'id' => 'cms-euro-rate-sidebar-widget',
+
+
+
+
+        )
+
+    );
+
+}
+						// widget class for euro rate 
+
+
+
+
+	class cms_Euro_Rate_Widget extends WP_Widget
+			{
+						
+				function __construct()
+					{
+								parent::__construct(
+								 
+								// Base ID of your widget
+									'cms_euro_widget', 
+								 
+								// Widget name will appear in UI
+									__('Euro Rate Widget', 'ceylonmultiservices'), 
+								 
+								// Widget description
+									array('description' => __('Widget for display Euro rate', 'ceylonmultiservices'), )
+								);
+					}
+								 
+								// Creating widget front-end
+						
+				public function widget($args, $instance)
+					{
+								$euro_rate = apply_filters('widget_title', $instance['euro_rate']);
+							 
+							  
+									$args['before_widget'] = '<div class="euro-rate-wrapper h-padding" >';
+								   $args['after_widget'] = '</div>';
+
+								   $getPathIt=get_template_directory_uri().'/images/it-flag.png';
+									$itflag='<img src=" '.$getPathIt .' " alt="">';
+
+									$getPathSl=get_template_directory_uri().'/images/sl-flag.png';
+									$slflag='<img src=" '.$getPathSl .' " alt="">';
+
+								// before and after widget arguments are defined by themes
+								echo $args['before_widget'];
+
+									echo $itflag;
+									echo '1 Euro = ';
+									if (!empty($euro_rate)){
+										echo $euro_rate.' LKR';
+									}
+									echo $slflag;		
+										
+							
+								// This is where you run the code and display the output
+						
+							   echo $args['after_widget'];
+					}
+								 
+								// Widget Backend
+				public function form($instance)
+					{
+								if (isset($instance['euro_rate'])) {
+									$euro_rate = $instance['euro_rate'];
+								} else {
+									$euro_rate = __('Enter the rate', 'ceylonmultiservices');
+								}
+							 
+							
+								// Widget admin form
+								?>
+								<p>
+								<label for="<?php echo $this->get_field_id('euro_rate'); ?>"><?php _e('Euro Rate :'); ?></label>
+								<input class="widefat" id="<?php echo $this->get_field_id('euro_rate'); ?>" name="<?php echo $this->get_field_name('euro_rate'); ?>" type="text" value="<?php echo esc_attr($euro_rate); ?>" />
+								</p>
+							
+							 
+							
+							
+							   
+							
+								<?php
+						
+					}
+								 
+								// Updating widget replacing old instances with new
+				public function update($new_instance, $old_instance)
+					{
+								$instance = array();
+								$instance['euro_rate'] = (!empty($new_instance['euro_rate'])) ? strip_tags($new_instance['euro_rate']) : '';
+						
+						
+								return $instance;
+					}
+								 
+								// Class wpb_widget ends here
+	} 
+						
+						
+						
+
+								// Register and load the widget
+	function cms__euro_widget()
+			{
+				register_widget('cms_Euro_Rate_Widget');
+			}
+	add_action('widgets_init', 'cms__euro_widget');
+
+add_action('widgets_init', 'my_sidebars');
+
 
 
 

@@ -54,7 +54,7 @@
                             <a href="<?php echo home_url();?>#our-team" class="nav-a">About</a>
                         </li>
                         <li class="nav-li">
-                            <a href="<?php echo get_permalink(get_page_by_path('our-manager')->ID); ?>" class="nav-a">Contact</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('office-work')->ID); ?>" class="nav-a">Air Tickets</a>
                         </li>
                         <li class="nav-li">
                             <a href="<?php echo get_permalink(get_page_by_path('blog')->ID); ?>" class="nav-a">Blog</a>
@@ -74,3 +74,10 @@
                 <i class="bi bi-list active"></i>
 
             </div>
+
+
+              <?php if (is_active_sidebar('cms-euro-rate-sidebar-widget')) : ?>
+                        
+                        <?php dynamic_sidebar('cms-euro-rate-sidebar-widget'); ?>
+
+             <?php endif; ?>

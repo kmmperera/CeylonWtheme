@@ -48,8 +48,7 @@ html {
 
 .post-swiper-slide {
   font-size: initial;
-  width: 24em !important;
-  height: 14em !important;
+  height: 24em !important;
   object-fit: cover !important;
 }
 .post-swiper-slide img {
@@ -176,6 +175,25 @@ html {
 
 #paynow-link {
   margin-top: 36px;
+}
+
+.page-margin-div .woocommerce.columns-4 {
+  padding-inline: var(--padding-inline);
+}
+
+.euro-rate-wrapper {
+  text-align: right;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  letter-spacing: 1px;
+}
+.euro-rate-wrapper img {
+  height: 20px;
+  object-fit: cover;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 /*# sourceMappingURL=common.css.map */
