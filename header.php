@@ -29,6 +29,7 @@
                         
                         <p> Monza </p> 
                     </div>
+                    <a id="logo-wrapper-a" href="<?php echo home_url();?>"></a>
                 </div>
                 <div id="nav-menus">
                     <div id="m-logo-area">
