@@ -54,7 +54,7 @@
                             <a href="<?php echo home_url();?>#our-team" class="nav-a">About</a>
                         </li>
                         <li class="nav-li">
-                            <a href="<?php echo get_permalink(get_page_by_path('office-work')->ID); ?>" class="nav-a">Air Tickets</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('office-work')->ID).'#airtickets'; ?>" class="nav-a">Air Tickets</a>
                         </li>
                         <li class="nav-li">
                             <a href="<?php echo get_permalink(get_page_by_path('blog')->ID); ?>" class="nav-a">Blog</a>

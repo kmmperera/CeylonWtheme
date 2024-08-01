@@ -48,7 +48,7 @@ html {
 
 .post-swiper-slide {
   font-size: initial;
-  height: 24em !important;
+  height: 16em !important;
   object-fit: cover !important;
 }
 .post-swiper-slide img {

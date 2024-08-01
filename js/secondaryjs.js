@@ -18,11 +18,23 @@ document.addEventListener('DOMContentLoaded', function () {
             prevEl: ".swiper-button-prev",
         },
         breakpoints: {
-            567: {
+            375: {
                 slidesPerView: 1,
             },
-            996: {
+            576: {
+                slidesPerView: 1,
+            },
+            768: {
                 slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 2,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+            1400: {
+                slidesPerView: 3,
             },
         },
     });

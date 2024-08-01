@@ -67,9 +67,9 @@
                         </div>
                         <div class="member-jobs">
                            
-                            <a href="<?php echo get_permalink(get_page_by_path('document-work')->ID); ?>" class="member-job">
+                            <a href="<?php echo get_permalink(get_page_by_path('document-work')->ID).'#730'; ?>" class="member-job">
                                 <span class="job-name">
-                                    All Document work
+                                    730
                                 </span>
                                 <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
@@ -77,9 +77,9 @@
 
 
                             </a>
-                            <a href="<?php echo get_permalink(get_page_by_path('document-work')->ID); ?>" class="member-job">
+                            <a href="<?php echo get_permalink(get_page_by_path('document-work')->ID).'#sogiorno'; ?>" class="member-job">
                                 <span class="job-name">
-                                    All Document work
+                                    Soggiorno Renewal
                                 </span>
                                 <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
@@ -87,9 +87,9 @@
 
 
                             </a>
-                            <a href="<?php echo get_permalink(get_page_by_path('document-work')->ID); ?>" class="member-job">
+                            <a href="<?php echo get_permalink(get_page_by_path('document-work')->ID).'#spid'; ?>" class="member-job">
                                 <span class="job-name">
-                                    All Document work
+                                   SPID 
                                 </span>
                                 <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
@@ -100,7 +100,7 @@
                            
                         </div>
                         <div class="see-more-btn">
-                            <a href="<?php echo get_permalink(get_page_by_path('document-work')->ID); ?>">See more</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('document-work')->ID).'#730'; ?>">See more</a>
                         </div>
                     </div>
                     <div class="team-member">
@@ -115,9 +115,9 @@
                         </div>
                         <div class="member-jobs">
                            
-                            <a href="<?php echo get_permalink(get_page_by_path('our-manager')->ID); ?>" class="member-job">
+                            <a href="<?php echo get_permalink(get_page_by_path('our-manager')->ID).'#consulting'; ?>" class="member-job">
                                 <span class="job-name">
-                                    All Document work
+                                    Consulting
                                 </span>
                                 <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
@@ -125,9 +125,9 @@
 
 
                             </a>
-                            <a href="<?php echo get_permalink(get_page_by_path('our-manager')->ID); ?>" class="member-job">
+                            <a href="<?php echo get_permalink(get_page_by_path('our-manager')->ID).'#business'; ?>" class="member-job">
                                 <span class="job-name">
-                                    All Document work
+                                   Business
                                 </span>
                                 <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
@@ -135,9 +135,9 @@
 
 
                             </a>
-                            <a href="<?php echo get_permalink(get_page_by_path('our-manager')->ID); ?>" class="member-job">
+                            <a href="<?php echo get_permalink(get_page_by_path('our-manager')->ID).'#impresa'; ?>" class="member-job">
                                 <span class="job-name">
-                                    All Document work
+                                    Impresa
                                 </span>
                                 <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
@@ -163,9 +163,9 @@
                         </div>
                         <div class="member-jobs">
                            
-                            <a href="<?php echo get_permalink(get_page_by_path('loan-provider')->ID); ?>" class="member-job">
+                            <a href="<?php echo get_permalink(get_page_by_path('loan-provider')->ID).'#loan'; ?>" class="member-job">
                                 <span class="job-name">
-                                    All Document work
+                                    Loans
                                 </span>
                                 <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
@@ -173,9 +173,9 @@
 
 
                             </a>
-                            <a href="<?php echo get_permalink(get_page_by_path('loan-provider')->ID); ?>" class="member-job">
+                            <a href="<?php echo get_permalink(get_page_by_path('loan-provider')->ID).'#bank'; ?>" class="member-job">
                                 <span class="job-name">
-                                    All Document work
+                                   Bank Support
                                 </span>
                                 <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
@@ -183,9 +183,9 @@
 
 
                             </a>
-                            <a href="<?php echo get_permalink(get_page_by_path('loan-provider')->ID); ?>" class="member-job">
+                            <a href="<?php echo get_permalink(get_page_by_path('loan-provider')->ID).'#work'; ?>" class="member-job">
                                 <span class="job-name">
-                                    All Document work
+                                   Work
                                 </span>
                                 <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
@@ -211,9 +211,9 @@
                         </div>
                         <div class="member-jobs">
                            
-                            <a href="<?php echo get_permalink(get_page_by_path('office-work')->ID); ?>" class="member-job">
+                            <a href="<?php echo get_permalink(get_page_by_path('office-work')->ID).'#airtickets'; ?>" class="member-job">
                                 <span class="job-name">
-                                    All Document work
+                                    Air Tickets
                                 </span>
                                 <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
@@ -221,9 +221,9 @@
 
 
                             </a>
-                            <a href="<?php echo get_permalink(get_page_by_path('office-work')->ID); ?>" class="member-job">
+                            <a href="<?php echo get_permalink(get_page_by_path('office-work')->ID).'#office'; ?>" class="member-job">
                                 <span class="job-name">
-                                    All Document work
+                                    Office Work
                                 </span>
                                 <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
@@ -231,9 +231,9 @@
 
 
                             </a>
-                            <a href="<?php echo get_permalink(get_page_by_path('office-work')->ID); ?>" class="member-job">
+                            <a href="<?php echo get_permalink(get_page_by_path('office-work')->ID).'#delivery'; ?>" class="member-job">
                                 <span class="job-name">
-                                    All Document work
+                                    Deliveries
                                 </span>
                                 <span class="job-link">
                                     <i class="bi bi-chevron-right"></i>
@@ -244,7 +244,7 @@
                            
                         </div>
                         <div class="see-more-btn">
-                            <a href="<?php echo get_permalink(get_page_by_path('office-work')->ID); ?>">See more</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('office-work')->ID).'#airtickets'; ?>">See more</a>
                         </div>
                     </div>
                 </div>
@@ -275,7 +275,7 @@
                                 <img src="<?php echo get_template_directory_uri().'/images/slider-5.png'?>" alt="">
                             </div>
                             <div class="swiper-slide post-swiper-slide ">
-                                <img src="<?php echo get_template_directory_uri().'/images/slider-6.png'?>" alt="">
+                                <img src="<?php echo get_template_directory_uri().'/images/slider-3.png'?>" alt="">
                             </div>
 
                             

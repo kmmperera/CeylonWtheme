@@ -36,7 +36,7 @@
                <input class="member-page-input-text" type="text" placeholder="Tel Number">
                <input class="memeber-page-service-submit-btn" type="submit" value="Send now">  -->
 
-               <?php echo do_shortcode("[scforjobform]"); ?>
+               <?php echo do_shortcode('[scforjobform staff="docs" operation="alldocs"]'); ?>
 
                
            </div>

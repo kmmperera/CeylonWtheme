@@ -195,14 +195,28 @@
 	margin:var(--main-body-margin);
 	font-size: var(--service-title-fz);
 	flex-grow: 1;
-	margin-top: 3em;
-	margin-bottom:6em;
+	margin-top: 2em;
+	margin-bottom:1em;
+	padding-bottom: 24px;
+	border-bottom: 1px solid #ddd;
+	
+}
+.accordion-content {
+    display: none;
+    padding: 15px;
+   
 }
 	.member-page-service-title { 
 		font-size: var(--service-title-fz);
 		line-height: 1.2;
 		letter-spacing: 0.15em;
 		font-weight: 500;
+		cursor: pointer;
+		background-color: #f1f1f1;
+		padding-left: 24px;
+		padding-block: 12px;
+
+		
 	}
 
 	#member-page-service-description { 
@@ -262,7 +276,7 @@
 
 //Modal
 
-#member-modal {
+.member-modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */

@@ -121,6 +121,112 @@ function ceyms_process_post_type() {
 }
 add_action('init', 'ceyms_process_post_type',0);
 
+function ceyms_supul_post_type() {
+
+	$args = array(
+
+
+	'labels' => array(
+
+				'name' => 'SupulMails',
+				'singular_name' => 'SupulMail',
+	),
+	'hierarchical' => true,
+	'public' => true,
+	'has_archive' => true,
+	
+	'menu_icon' => 'dashicons-images-alt2',
+	'supports' => array('title', 'editor', 'thumbnail','custom-fields', 'excerpt', 'comments'),
+
+	);
+
+
+register_post_type('supul', $args);
+
+
+}
+add_action('init', 'ceyms_supul_post_type',0);
+
+
+function ceyms_arun_post_type() {
+
+	$args = array(
+
+
+	'labels' => array(
+
+				'name' => 'ArunMails',
+				'singular_name' => 'ArunMail',
+	),
+	'hierarchical' => true,
+	'public' => true,
+	'has_archive' => true,
+	
+	'menu_icon' => 'dashicons-images-alt2',
+	'supports' => array('title', 'editor', 'thumbnail','custom-fields', 'excerpt', 'comments'),
+
+	);
+
+
+register_post_type('arun', $args);
+
+
+}
+add_action('init', 'ceyms_arun_post_type',0);
+
+
+
+function ceyms_loans_post_type() {
+
+	$args = array(
+
+
+	'labels' => array(
+
+				'name' => 'LoanMails',
+				'singular_name' => 'LoanMail',
+	),
+	'hierarchical' => true,
+	'public' => true,
+	'has_archive' => true,
+	
+	'menu_icon' => 'dashicons-images-alt2',
+	'supports' => array('title', 'editor', 'thumbnail','custom-fields', 'excerpt', 'comments'),
+
+	);
+
+
+register_post_type('loan', $args);
+
+
+}
+add_action('init', 'ceyms_loans_post_type',0);
+
+function ceyms_docs_post_type() {
+
+	$args = array(
+
+
+	'labels' => array(
+
+				'name' => 'DocsMails',
+				'singular_name' => 'DocsMail',
+	),
+	'hierarchical' => true,
+	'public' => true,
+	'has_archive' => true,
+	
+	'menu_icon' => 'dashicons-images-alt2',
+	'supports' => array('title', 'editor', 'thumbnail','custom-fields', 'excerpt', 'comments'),
+
+	);
+
+
+register_post_type('docs', $args);
+
+
+}
+add_action('init', 'ceyms_docs_post_type',0);
 
 								// wp mail set up
 
@@ -190,20 +296,35 @@ add_action( 'phpmailer_init', 'my_phpmailer_smtp' );
 								// short codes for user input forms 
 
 
-function shortcodeforjobform(){   
+function shortcodeforjobform($atts){   
+
+	$atts = shortcode_atts(
+        array(
+            'staff' => 'Staff member ',
+            'operation' => 'Operation  to be done',
+           
+        ),
+        $atts,
+        'scforjobform'
+    );
+    $staff = esc_html($atts['staff']);
+    $operation = esc_html($atts['operation']);
 
 	?>
-			<form id="member-page-service-input-form">
-			<input id="name" class="member-page-input-text" type="text" placeholder="Name" required>
-			<input id="surname" class="member-page-input-text" type="text" placeholder="Surname" required>
-			<input id="address" class="member-page-input-text" type="email" placeholder="Email Address" required>
-			<input id="telnum" class="member-page-input-text" type="text" placeholder="Tel Number" required>
+			<form class="member-page-service-input-form"> 
+			<input class="staff" type="hidden" name="staff" value="<?php echo $staff; ?>">
+			<input class="operation" type="hidden" name="operation" value="<?php echo $operation; ?>">
+
+			<input  class="member-page-input-text name" type="text" placeholder="Name" required>
+			<input  class="member-page-input-text surname" type="text" placeholder="Surname" required>
+			<input  class="member-page-input-text address" type="email" placeholder="Email Address" required>
+			<input  class="member-page-input-text telnum" type="text" placeholder="Tel Number" required>
 
 			<input class="memeber-page-service-submit-btn" type="submit" value="Send now">
 			</form>
 			<div class="response-results">
 			
-				<div id="member-modal" class="modal">
+				<div  class="modal member-modal">
 					<div class="modal-content">
 						<span class="member-modal-close"><i class="bi bi-x-square"></i></span>
 						<p class="submit-results-member-jobs"></p>
@@ -238,17 +359,23 @@ function ceymsjobsaddfunc(){
 			$surname = $_POST['surname'];
 			$address = $_POST['address'];
 			$telnum = $_POST['telnum'];
+			$staff = $_POST['staff'];
+			$operation = $_POST['operation'];
+
 			
 			$full_name=$name." ".$surname;
-			$final_content="Full Name: ".$name." ".$surname."\n";
+			$cms_post_heading=$full_name." - ".$operation;
+			$final_content="Job: ".$operation."\n";
+
+			$final_content.="Full Name: ".$name." ".$surname."\n";
 			$final_content .="Address: ".$address."\n";
 			$final_content .="Telephone Number: ".$telnum."\n";
 		
 			$post = array(
-				'post_title'    => $full_name,
+				'post_title'    => $cms_post_heading,
 				'post_content' =>  $final_content,
 				'post_status'   => 'draft',   
-				'post_type'     => 'jobs'
+				'post_type'     => $staff
 			);
 
 			$post_id = wp_insert_post($post);

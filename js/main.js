@@ -41,22 +41,7 @@
 
 
 //   // Get the modal
-let membermodal = document.getElementById("member-modal");
 
-let closespan = document.querySelector(".member-modal-close");
-
-closespan.onclick=function() {
-    if(membermodal){
-        membermodal.style.display = "none";
-    }
-   
-  };
-
-    window.addEventListener("click", function(event) {
-      if (event.target == membermodal) {
-        membermodal.style.display = "none";
-      }
-  });
 
 
 //   // Get the button that opens the modal
@@ -107,24 +92,37 @@ closespan.onclick=function() {
 
  jQuery(document).ready(function($){
     console.log("jq works");
-    $('.memeber-page-service-submit-btn').click(function(e){
+    $('.member-page-service-input-form').on('submit',function(e){
         e.preventDefault();
         console.log('Form Submitted');
-  
-        let formSelected = e.currentTarget.parentElement;
-        //let nextele=formSelected.next();
-       // let modaldiv=nextele.children()[0];
-       // let product_id   = document.getElementById(formSelected.id + '-hidden').value;
-  
-       // let values = [];
-  
-       // values = Array.from( document.querySelectorAll( 'input[type=checkbox]:checked' )).map(item=>item.value);
-  
-         let name   = document.getElementById('name').value;
-         let surname   = document.getElementById('surname').value;
-         let address   = document.getElementById('address').value;
-         let telnum   = document.getElementById('telnum').value;
-        
+          let  jobform = $(this);
+                    
+          let membermodal = jobform.siblings().find(".member-modal");
+
+          let closespan = jobform.siblings().find(".member-modal-close");
+
+          closespan.click(function(){
+
+            membermodal.css("display", "none");
+          });
+
+       
+         let name= jobform.find('.name').val();
+         let surname= jobform.find('.surname').val();
+         let address= jobform.find('.address').val();
+         let telnum= jobform.find('.telnum').val();
+         let staff= jobform.find('.staff').val();
+         let operation= jobform.find('.operation').val();
+       // console.log(jobform);
+        console.log(name);
+
+        //  let name   = document.getElementById('name').value;
+        //  let surname   = document.getElementById('surname').value;
+        //  let address   = document.getElementById('address').value;
+        //  let telnum   = document.getElementById('telnum').value;
+        //  let staff   = document.getElementById('staff').value;
+        //  let operation   = document.getElementById('operation').value;
+
             $.ajax({
                 // Pass the admin-ajax.php into url.
                 url: ajax_object.ajax_url,
@@ -133,23 +131,39 @@ closespan.onclick=function() {
                     'name': name,
                     'surname': surname,
                     'address': address, 
-                    'telnum': telnum
+                    'telnum': telnum,
+                    'staff': staff,
+                    'operation': operation
+
                 },
                 type: 'post',
                 success: function(res){
                     console.log(res);
-                    document.getElementById("member-modal").style.display = "block";
-                    document.querySelector('.submit-results-member-jobs').innerHTML=res;
-                    formSelected.reset();
+                  //  document.getElementById("member-modal").style.display = "block";
+                  //  document.querySelector('.submit-results-member-jobs').innerHTML=res;
+
+                    let siblings = jobform.siblings();
+                    let  siblingsChildren = siblings.find('.member-modal');
+                    siblingsChildren.css("display", "block");
+                    siblingsChildren.find('.submit-results-member-jobs').html(res);
+                    jobform[0].reset();
                    // window.location.reload();
                 },
                 error: function(err){
                     console.log(err);
-                    document.getElementById("member-modal").style.display = "block";
+                  //  document.getElementById("member-modal").style.display = "block";
                     //document.querySelectorAll(".modal-pay-btn").style.display = "none";
 
-                    document.querySelector('.submit-results-member-jobs').innerHTML=err;
-                    formSelected.reset();
+                   // document.querySelector('.submit-results-member-jobs').innerHTML=err;
+                   let siblings = jobform.siblings();
+                   let  siblingsChildren = siblings.find('.member-modal');
+                   let  paybutton = siblings.find('.modal-pay-btn');
+
+                   siblingsChildren.css("display", "block");
+                   paybutton.css("display", "none");
+                   siblingsChildren.find('.submit-results-member-jobs').html(err);
+                   jobform[0].reset();
+
                 },
             });
         
@@ -162,9 +176,40 @@ closespan.onclick=function() {
     });
 
 
+
+    // accordion
+     // Function to toggle accordion sections
+     console.log("accordion work");
+     function toggleAccordion(sectionId) {
+         $('.accordion-content').slideUp();
+         $('#' + sectionId + ' .accordion-content').slideDown();
+     }
+ 
+     // Get the URL parameter and expand the corresponding section
+     const section =window.location.hash ? window.location.hash.substring(1) :null ;
+     const ifaccordion=$('.staff-accordion');
+     if (section) {
+         toggleAccordion(section);
+     }
+ 
+     // Add click event to accordion headers to toggle sections
+     if(ifaccordion){ 
+             $('.accordion-header').click(function() {
+                 const sectionId = $(this).parent().attr('id');
+                 toggleAccordion(sectionId);
+             });
+ 
+         }   
+         
+         function toggleAccordion(sectionId) {
+            $('.accordion-content').slideUp();
+            $('#' + sectionId + ' .accordion-content').slideDown();
+        }  
    
 
   });
 
+
+  
 
   
